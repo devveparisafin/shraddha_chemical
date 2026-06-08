@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shraddha Chemical — Semiconductor & Electronic Grade Chemicals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy: #0B1F3A;
+      --blue: #0066CC;
+      --teal: #00A896;
+      --bg: #F4F7FB;
+      --white: #ffffff;
+      --charcoal: #1A1A2E;
+      --gray: #6B7280;
+      --light-gray: #E8EDF4;
+      --amber: #F59E0B;
+      --amber-light: #FEF3C7;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--charcoal); overflow-x:hidden; }
+    h1,h2,h3,h4,h5 { font-family:'Syne',sans-serif; }
+
+    /* NAV */
+    nav {
+      position:fixed; top:0; left:0; right:0; z-index:1000;
+      background:rgba(11,31,58,0.97); backdrop-filter:blur(12px);
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 5%; height:68px;
+      border-bottom:1px solid rgba(0,168,150,0.2);
+    }
+    .nav-logo { font-family:'Syne',sans-serif; font-weight:800; font-size:1.2rem; color:#fff; }
+    .nav-logo span { color:var(--teal); }
+    .nav-links { display:flex; gap:2rem; list-style:none; }
+    .nav-links a { color:rgba(255,255,255,0.7); text-decoration:none; font-size:0.88rem; font-weight:500; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--teal); }
+    .nav-cta { background:var(--teal); color:#fff !important; padding:0.45rem 1.2rem; border-radius:4px; font-weight:600 !important; }
+    .nav-cta:hover { background:#008f7e !important; }
+
+    /* STATUS BANNER */
+    .status-banner {
+      margin-top:68px;
+      background: linear-gradient(90deg, #78350f, #92400e);
+      padding: 0.7rem 5%;
+      display:flex; align-items:center; justify-content:center; gap:0.75rem;
+      text-align:center;
+    }
+    .status-banner .dot {
+      width:8px; height:8px; border-radius:50%; background:var(--amber);
+      animation: blink 1.5s infinite;
+      flex-shrink:0;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    .status-banner p {
+      font-size:0.82rem; color:#FDE68A; font-weight:500; line-height:1.5;
+    }
+    .status-banner strong { color:#fff; }
+
+    /* HERO */
+    #home {
+      min-height:100vh;
+      background:linear-gradient(140deg,#0B1F3A 0%,#0d2a50 60%,#0B1F3A 100%);
+      display:flex; align-items:center; padding:0 5%;
+      position:relative; overflow:hidden;
+    }
+    .hero-grid {
+      position:absolute; inset:0;
+      background-image: linear-gradient(rgba(0,168,150,0.06) 1px,transparent 1px), linear-gradient(90deg,rgba(0,168,150,0.06) 1px,transparent 1px);
+      background-size:60px 60px;
+      animation:gridMove 20s linear infinite;
+    }
+    @keyframes gridMove { 0%{background-position:0 0} 100%{background-position:60px 60px} }
+    .hero-orb { position:absolute; border-radius:50%; filter:blur(80px); opacity:0.13; }
+    .orb1 { width:500px; height:500px; background:var(--blue); right:-80px; top:-80px; }
+    .orb2 { width:300px; height:300px; background:var(--teal); left:5%; bottom:5%; }
+    .hero-content { position:relative; z-index:2; max-width:780px; animation:fadeUp 0.9s ease both; }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+
+    .hero-stage-pill {
+      display:inline-flex; align-items:center; gap:0.6rem;
+      background:rgba(245,158,11,0.15); border:1px solid rgba(245,158,11,0.4);
+      color:#FCD34D; padding:0.4rem 1rem; border-radius:100px;
+      font-size:0.78rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;
+      margin-bottom:1.5rem;
+    }
+    .hero-stage-pill::before { content:''; width:6px; height:6px; border-radius:50%; background:#FCD34D; animation:blink 1.5s infinite; }
+
+    .hero-title { font-size:clamp(2.2rem,5vw,3.8rem); font-weight:800; color:#fff; line-height:1.1; letter-spacing:-0.03em; margin-bottom:1.2rem; }
+    .hero-title span { color:var(--teal); }
+    .hero-sub { font-size:1.05rem; color:rgba(255,255,255,0.62); line-height:1.75; max-width:580px; margin-bottom:2.4rem; }
+
+    .hero-transparent-note {
+      background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12);
+      border-left:3px solid var(--teal);
+      border-radius:8px; padding:1rem 1.25rem;
+      font-size:0.88rem; color:rgba(255,255,255,0.65); line-height:1.7;
+      margin-bottom:2rem; max-width:580px;
+    }
+    .hero-transparent-note strong { color:var(--teal); }
+
+    .hero-btns { display:flex; gap:1rem; flex-wrap:wrap; }
+    .btn-primary { background:var(--teal); color:#fff; padding:0.85rem 2rem; border-radius:6px; font-family:'Syne',sans-serif; font-weight:700; font-size:0.95rem; text-decoration:none; transition:all 0.2s; border:none; cursor:pointer; display:inline-block; }
+    .btn-primary:hover { background:#008f7e; transform:translateY(-2px); box-shadow:0 8px 25px rgba(0,168,150,0.3); }
+    .btn-outline { background:transparent; color:#fff; padding:0.85rem 2rem; border-radius:6px; font-family:'Syne',sans-serif; font-weight:700; font-size:0.95rem; text-decoration:none; border:1px solid rgba(255,255,255,0.3); transition:all 0.2s; display:inline-block; }
+    .btn-outline:hover { border-color:var(--teal); color:var(--teal); transform:translateY(-2px); }
+
+    /* SECTION BASICS */
+    section { scroll-margin-top:68px; }
+    .section-tag { display:inline-block; font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--teal); margin-bottom:0.6rem; }
+    .section-title { font-size:clamp(1.7rem,3.5vw,2.5rem); font-weight:800; color:var(--navy); letter-spacing:-0.03em; line-height:1.15; }
+    .section-sub { color:var(--gray); font-size:0.95rem; line-height:1.75; margin-top:0.75rem; }
+
+    /* JOURNEY / ROADMAP */
+    #journey {
+      padding:6rem 5%;
+      background:var(--white);
+    }
+    .journey-inner { max-width:1100px; margin:auto; }
+    .journey-header { text-align:center; max-width:600px; margin:0 auto 4rem; }
+
+    .roadmap {
+      position:relative;
+      display:grid; grid-template-columns:repeat(4,1fr); gap:0;
+    }
+    .roadmap::before {
+      content:'';
+      position:absolute; top:52px; left:12.5%; right:12.5%;
+      height:2px; background:linear-gradient(90deg, var(--teal), var(--blue), #cbd5e1);
+      z-index:0;
+    }
+    .roadmap-step { text-align:center; padding:0 1rem; position:relative; z-index:1; }
+    .step-circle {
+      width:52px; height:52px; border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.3rem; margin:0 auto 1.25rem;
+      position:relative;
+    }
+    .step-circle.done { background:linear-gradient(135deg,var(--teal),#00c4af); box-shadow:0 0 0 6px rgba(0,168,150,0.15); }
+    .step-circle.active { background:linear-gradient(135deg,#F59E0B,#D97706); box-shadow:0 0 0 6px rgba(245,158,11,0.2); animation:activeGlow 2s ease-in-out infinite; }
+    @keyframes activeGlow { 0%,100%{box-shadow:0 0 0 6px rgba(245,158,11,0.2)} 50%{box-shadow:0 0 0 12px rgba(245,158,11,0.08)} }
+    .step-circle.pending { background:#E8EDF4; border:2px dashed #CBD5E1; }
+
+    .step-status {
+      font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
+      margin-bottom:0.5rem;
+    }
+    .step-status.done { color:var(--teal); }
+    .step-status.active { color:var(--amber); }
+    .step-status.pending { color:#94a3b8; }
+
+    .roadmap-step h4 { font-size:0.95rem; font-weight:700; color:var(--navy); margin-bottom:0.4rem; }
+    .roadmap-step p { font-size:0.8rem; color:var(--gray); line-height:1.5; }
+
+    .step-check { color:#fff; font-size:1rem; }
+    .step-spin { color:#fff; font-size:1rem; animation:spin 3s linear infinite; }
+    @keyframes spin { 0%{transform:rotate(0deg)} 100%{transform:rotate(360deg)} }
+    .step-lock { color:#94a3b8; font-size:1rem; }
+
+    .journey-note {
+      margin-top:3.5rem;
+      background:linear-gradient(135deg,#fffbeb,#fef9ee);
+      border:1px solid #FDE68A;
+      border-radius:12px; padding:1.75rem 2rem;
+      display:flex; gap:1.25rem; align-items:flex-start;
+    }
+    .journey-note .note-icon { font-size:1.6rem; flex-shrink:0; }
+    .journey-note h4 { font-family:'Syne',sans-serif; font-weight:700; color:#92400e; margin-bottom:0.4rem; }
+    .journey-note p { font-size:0.88rem; color:#78350f; line-height:1.7; }
+
+    /* ABOUT */
+    #about {
+      padding:6rem 5%;
+      background:var(--navy);
+      position:relative; overflow:hidden;
+    }
+    #about::before { content:''; position:absolute; right:-200px; top:-200px; width:600px; height:600px; background:radial-gradient(circle,rgba(0,102,204,0.12),transparent 70%); border-radius:50%; }
+    .about-inner { max-width:1100px; margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; position:relative; z-index:1; }
+    .about-text .section-title { color:#fff; }
+    .about-text .section-sub { color:rgba(255,255,255,0.55); }
+    .about-story { color:rgba(255,255,255,0.65); font-size:0.93rem; line-height:1.85; margin-top:1.25rem; }
+    .about-values { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:2rem; }
+    .value-pill { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:1rem 1.2rem; }
+    .value-pill h4 { font-size:0.82rem; font-weight:700; color:var(--teal); margin-bottom:0.25rem; }
+    .value-pill p { font-size:0.78rem; color:rgba(255,255,255,0.45); line-height:1.5; }
+    .about-mission { background:rgba(0,168,150,0.1); border:1px solid rgba(0,168,150,0.3); border-radius:16px; padding:2.5rem; }
+    .about-mission .label { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--teal); font-weight:700; margin-bottom:1rem; }
+    .about-mission .mission-text { font-family:'Syne',sans-serif; font-size:1.15rem; font-weight:600; color:#fff; line-height:1.65; }
+    .about-mission .vision-text { font-size:0.88rem; color:rgba(255,255,255,0.55); line-height:1.75; margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.1); }
+    .founders-note { margin-top:1.5rem; background:rgba(255,255,255,0.05); border-radius:10px; padding:1.25rem; font-size:0.84rem; color:rgba(255,255,255,0.55); line-height:1.7; font-style:italic; border-left:3px solid var(--teal); }
+
+    /* PRODUCTS */
+    #products { padding:6rem 5%; background:var(--bg); }
+    .products-inner { max-width:1100px; margin:auto; }
+    .products-header { text-align:center; max-width:620px; margin:0 auto 1.5rem; }
+    .products-disclaimer {
+      max-width:700px; margin:0 auto 3.5rem;
+      background:#EFF6FF; border:1px solid #BFDBFE; border-radius:10px;
+      padding:1rem 1.5rem; text-align:center;
+      font-size:0.85rem; color:#1d4ed8; line-height:1.6;
+    }
+    .products-disclaimer strong { font-weight:700; }
+    .product-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:2rem; }
+    .product-card { background:var(--white); border-radius:16px; overflow:hidden; border:1px solid var(--light-gray); transition:all 0.3s; }
+    .product-card:hover { transform:translateY(-5px); box-shadow:0 18px 45px rgba(11,31,58,0.11); }
+    .product-card-top { padding:2rem 2rem 1.5rem; background:linear-gradient(135deg,var(--navy),#0d2a50); position:relative; overflow:hidden; }
+    .product-card-top::after { content:''; position:absolute; bottom:-30px; right:-30px; width:120px; height:120px; border-radius:50%; border:2px solid rgba(0,168,150,0.15); }
+    .product-emoji { font-size:2.2rem; margin-bottom:0.75rem; }
+    .product-card-top h3 { font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:0.5rem; }
+    .product-grade { display:inline-block; background:rgba(0,168,150,0.2); color:var(--teal); font-size:0.72rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.25rem 0.75rem; border-radius:100px; border:1px solid rgba(0,168,150,0.35); }
+    .product-future-tag { display:inline-block; background:rgba(245,158,11,0.2); color:#FCD34D; font-size:0.72rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:0.25rem 0.7rem; border-radius:100px; border:1px solid rgba(245,158,11,0.3); margin-left:0.4rem; }
+    .product-card-body { padding:1.75rem 2rem 2rem; }
+    .product-tagline { font-style:italic; color:var(--blue); font-size:0.88rem; margin-bottom:1rem; font-weight:500; }
+    .product-desc { font-size:0.86rem; color:var(--gray); line-height:1.7; margin-bottom:1.5rem; }
+    .spec-table { width:100%; border-collapse:collapse; font-size:0.82rem; }
+    .spec-table tr { border-bottom:1px solid var(--light-gray); }
+    .spec-table tr:last-child { border-bottom:none; }
+    .spec-table td { padding:0.55rem 0; vertical-align:top; }
+    .spec-table td:first-child { color:var(--gray); width:42%; font-weight:500; }
+    .spec-table td:last-child { color:var(--charcoal); font-weight:600; }
+    .product-industries { margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid var(--light-gray); }
+    .product-industries .label { font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--gray); font-weight:700; margin-bottom:0.6rem; }
+    .industry-tags { display:flex; flex-wrap:wrap; gap:0.4rem; }
+    .industry-tag { background:#EBF4FF; color:var(--blue); font-size:0.75rem; font-weight:600; padding:0.3rem 0.7rem; border-radius:4px; }
+    .products-cta { margin-top:3.5rem; background:linear-gradient(135deg,var(--navy),#0d2a50); border-radius:16px; padding:3rem; text-align:center; position:relative; overflow:hidden; }
+    .products-cta::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(0,168,150,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,168,150,0.05) 1px,transparent 1px); background-size:40px 40px; }
+    .products-cta h3 { font-size:1.5rem; color:#fff; margin-bottom:0.75rem; position:relative; }
+    .products-cta p { color:rgba(255,255,255,0.6); font-size:0.92rem; margin-bottom:1.75rem; position:relative; }
+    .products-cta .btn-primary { position:relative; }
+
+    /* CONTACT */
+    #contact { padding:6rem 5%; background:var(--white); }
+    .contact-inner { max-width:1100px; margin:auto; display:grid; grid-template-columns:1fr 1.4fr; gap:5rem; align-items:start; }
+    .contact-info .section-sub { margin-bottom:2.5rem; }
+    .contact-detail { display:flex; align-items:flex-start; gap:1rem; margin-bottom:1.5rem; }
+    .contact-icon { width:42px; height:42px; min-width:42px; background:linear-gradient(135deg,var(--teal),var(--blue)); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:1rem; }
+    .contact-detail-text h4 { font-size:0.75rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--gray); font-weight:700; margin-bottom:0.2rem; }
+    .contact-detail-text p { font-size:0.93rem; color:var(--charcoal); font-weight:500; }
+    .why-contact { background:var(--bg); border-radius:12px; padding:1.5rem; margin-top:2rem; }
+    .why-contact h4 { font-size:0.85rem; font-weight:700; color:var(--navy); margin-bottom:0.85rem; }
+    .why-contact ul { list-style:none; }
+    .why-contact li { font-size:0.85rem; color:var(--gray); padding:0.35rem 0; display:flex; align-items:center; gap:0.6rem; }
+    .why-contact li::before { content:'→'; color:var(--teal); font-weight:700; }
+    .contact-form { background:var(--bg); border-radius:16px; padding:2.5rem; border:1px solid var(--light-gray); }
+    .contact-form h3 { font-size:1.2rem; font-weight:700; color:var(--navy); margin-bottom:1.75rem; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .form-group { margin-bottom:1.25rem; }
+    .form-group label { display:block; font-size:0.78rem; font-weight:600; color:var(--charcoal); margin-bottom:0.4rem; text-transform:uppercase; letter-spacing:0.05em; }
+    .form-group input, .form-group select, .form-group textarea { width:100%; background:#fff; border:1px solid var(--light-gray); border-radius:8px; padding:0.75rem 1rem; font-family:'DM Sans',sans-serif; font-size:0.9rem; color:var(--charcoal); outline:none; transition:border-color 0.2s, box-shadow 0.2s; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color:var(--teal); box-shadow:0 0 0 3px rgba(0,168,150,0.12); }
+    .form-group textarea { resize:vertical; min-height:110px; }
+    .form-submit { width:100%; background:linear-gradient(135deg,var(--teal),var(--blue)); color:#fff; border:none; border-radius:8px; padding:1rem; font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; cursor:pointer; transition:all 0.2s; }
+    .form-submit:hover { transform:translateY(-2px); box-shadow:0 8px 25px rgba(0,102,204,0.25); }
+
+    /* FOOTER */
+    footer { background:var(--navy); padding:3rem 5% 2rem; border-top:1px solid rgba(255,255,255,0.06); }
+    .footer-inner { max-width:1100px; margin:auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.5rem; }
+    .footer-logo { font-family:'Syne',sans-serif; font-weight:800; font-size:1.2rem; color:#fff; }
+    .footer-logo span { color:var(--teal); }
+    .footer-tagline { font-size:0.78rem; color:rgba(255,255,255,0.35); margin-top:0.3rem; }
+    .footer-links { display:flex; gap:1.75rem; list-style:none; }
+    .footer-links a { color:rgba(255,255,255,0.45); text-decoration:none; font-size:0.82rem; transition:color 0.2s; }
+    .footer-links a:hover { color:var(--teal); }
+    .footer-copy { width:100%; text-align:center; font-size:0.76rem; color:rgba(255,255,255,0.22); margin-top:2rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.06); }
+
+    /* REVEAL */
+    .reveal { opacity:0; transform:translateY(24px); transition:opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .nav-links { display:none; }
+      .about-inner { grid-template-columns:1fr; gap:2.5rem; }
+      .contact-inner { grid-template-columns:1fr; gap:2.5rem; }
+      .form-row { grid-template-columns:1fr; }
+      .about-values { grid-template-columns:1fr; }
+      .roadmap { grid-template-columns:1fr 1fr; gap:2rem; }
+      .roadmap::before { display:none; }
+    }
+    @media(max-width:480px){
+      .roadmap { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Shraddha <span>Chemical</span></div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#journey">Our Journey</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#contact" class="nav-cta">Connect With Us</a></li>
+  </ul>
+</nav>
+
+<!-- STATUS BANNER -->
+<div class="status-banner">
+  <div class="dot"></div>
+  <p><strong>Currently in Process Verification Stage</strong> — We are not yet manufacturing. We are transparently sharing our journey as we build toward full production.</p>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-orb orb1"></div>
+  <div class="hero-orb orb2"></div>
+  <div class="hero-content">
+    <div class="hero-stage-pill">Pre-Manufacturing Stage</div>
+    <h1 class="hero-title">Building the Future of<br><span>Semiconductor Chemicals</span><br>in India</h1>
+    <p class="hero-sub">Shraddha Chemical is developing ultra-pure semiconductor and electronic grade chemicals — Copper Sulfate, Aluminium Oxide, and Colloidal Silica — for India's growing electronics manufacturing sector.</p>
+    <div class="hero-transparent-note">
+      <strong>A note of transparency:</strong> We are currently in the process verification stage. Manufacturing has not started yet. Once our process is validated, we will move to plant construction, licensing, and then full-scale production. We believe in building trust before building product.
+    </div>
+    <div class="hero-btns">
+      <a href="#journey" class="btn-primary">See Our Roadmap</a>
+      <a href="#contact" class="btn-outline">Register Interest</a>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY / ROADMAP -->
+<section id="journey">
+  <div class="journey-inner">
+    <div class="journey-header reveal">
+      <span class="section-tag">Our Journey</span>
+      <h2 class="section-title">Where We Are & Where We're Going</h2>
+      <p class="section-sub">We believe in radical transparency. Here is our honest, real-time progress toward becoming a full-scale semiconductor chemical manufacturer.</p>
+    </div>
+
+    <div class="roadmap reveal">
+
+      <div class="roadmap-step">
+        <div class="step-circle done"><span class="step-check">✓</span></div>
+        <div class="step-status done">Completed</div>
+        <h4>Company Founded</h4>
+        <p>Shraddha Chemical established with a clear vision and focused product portfolio.</p>
+      </div>
+
+      <div class="roadmap-step">
+        <div class="step-circle active"><span class="step-spin">⚙</span></div>
+        <div class="step-status active">In Progress — Current Stage</div>
+        <h4>Process Verification</h4>
+        <p>Actively developing and testing production processes to meet semiconductor-grade purity standards.</p>
+      </div>
+
+      <div class="roadmap-step">
+        <div class="step-circle pending"><span class="step-lock">🔒</span></div>
+        <div class="step-status pending">Upcoming</div>
+        <h4>Plant Construction & Licensing</h4>
+        <p>Once process is verified, we will begin plant setup and obtain all required manufacturing licences.</p>
+      </div>
+
+      <div class="roadmap-step">
+        <div class="step-circle pending"><span class="step-lock">🔒</span></div>
+        <div class="step-status pending">Future Goal</div>
+        <h4>Manufacturing Begins</h4>
+        <p>Full-scale production and supply of electronic grade chemicals to Indian manufacturers.</p>
+      </div>
+
+    </div>
+
+    <div class="journey-note reveal">
+      <div class="note-icon">💡</div>
+      <div>
+        <h4>Why are we sharing this before we're ready?</h4>
+        <p>The chemical industry runs on trust. We'd rather be honest about being early-stage than make claims we cannot yet fulfill. By connecting with manufacturers and partners now, we aim to understand real industry needs — so when we do manufacture, we manufacture exactly what the market requires. Your interest and feedback today directly shapes our tomorrow.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-text reveal">
+      <span class="section-tag">About Us</span>
+      <h2 class="section-title">Built on Precision.<br>Driven by Purpose.</h2>
+      <p class="section-sub">Founded to serve India's semiconductor manufacturing sector with world-class chemical inputs — we're building it right from the ground up.</p>
+      <p class="about-story">The semiconductor industry demands nothing less than perfection — impurities measured in parts per billion, consistency across every batch, and reliability in every delivery. Shraddha Chemical was born from this understanding.<br><br>We are a newly founded company focused on a carefully chosen portfolio: <strong style="color:var(--teal)">Copper Sulfate, Aluminium Oxide, and Colloidal Silica</strong> — three materials that sit at the heart of semiconductor fabrication and precision electronics manufacturing.<br><br>We are currently in the process verification phase. Every step we take is deliberate — because in our industry, getting it right matters far more than getting there fast.</p>
+      <div class="about-values">
+        <div class="value-pill"><h4>Purity</h4><p>Zero compromise on chemical grade or specifications</p></div>
+        <div class="value-pill"><h4>Trust</h4><p>Honest, transparent communication always</p></div>
+        <div class="value-pill"><h4>Precision</h4><p>Accurate processes, documentation & consistency</p></div>
+        <div class="value-pill"><h4>Growth</h4><p>Growing with India's semiconductor revolution</p></div>
+      </div>
+    </div>
+
+    <div class="about-mission reveal">
+      <div class="label">🎯 Our Mission</div>
+      <p class="mission-text">"To be the most reliable partner for factories and manufacturers who demand purity, consistency, and technical excellence in every chemical they use."</p>
+      <p class="vision-text">
+        <strong style="color:var(--teal);display:block;margin-bottom:0.5rem">Our Vision</strong>
+        To grow alongside India's semiconductor revolution — supporting manufacturers with chemicals that meet global standards, backed by local expertise and trusted long-term relationships.
+      </p>
+      <div class="founders-note">
+        "We chose to build our website before our plant — because relationships and trust take longer to build than infrastructure. We want to connect with the industry from day one."
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="products-inner">
+    <div class="products-header reveal">
+      <span class="section-tag">Planned Products</span>
+      <h2 class="section-title">Our Future Product Portfolio</h2>
+    </div>
+    <div class="products-disclaimer reveal">
+      <strong>📋 Please Note:</strong> The products listed below represent our <strong>planned manufacturing portfolio</strong>. These specifications are our target grades. We are currently in process verification — products are <strong>not yet available for sale or supply</strong>. Register your interest and we will notify you when we are production-ready.
+    </div>
+
+    <div class="product-cards">
+
+      <div class="product-card reveal">
+        <div class="product-card-top">
+          <div class="product-emoji">🔵</div>
+          <h3>Copper Sulfate</h3>
+          <span class="product-grade">Electronic Grade</span>
+          <span class="product-future-tag">Planned</span>
+        </div>
+        <div class="product-card-body">
+          <p class="product-tagline">The Foundation of Precision Electroplating</p>
+          <p class="product-desc">Targeted for PCB manufacturing, semiconductor interconnect plating, and electrodeposition. Our goal is electronic-grade purity with verified batch consistency.</p>
+          <table class="spec-table">
+            <tr><td>Target Purity</td><td>≥ 99.9%</td></tr>
+            <tr><td>Form</td><td>Crystalline / Solution</td></tr>
+            <tr><td>Application</td><td>PCB plating, via filling</td></tr>
+          </table>
+          <div class="product-industries">
+            <div class="label">Target Industries</div>
+            <div class="industry-tags">
+              <span class="industry-tag">PCB Manufacturers</span>
+              <span class="industry-tag">Semiconductor Fabs</span>
+              <span class="industry-tag">Electronics Assembly</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-card-top">
+          <div class="product-emoji">⚪</div>
+          <h3>
+            <a style="text-decoration: none;color:#fff" href="aluminium-oxide.html">Aluminium Oxide</a>
+          </h3>
+          <span class="product-grade">Semiconductor Grade</span>
+          <span class="product-future-tag">Planned</span>
+        </div>
+        <div class="product-card-body">
+          <p class="product-tagline">Unmatched Hardness. Unrivalled Precision.</p>
+          <p class="product-desc">Planned for precision polishing, lapping, and wafer surface preparation with controlled particle sizes suited to semiconductor fabrication environments.</p>
+          <table class="spec-table">
+            <tr><td>Target Purity</td><td>≥ 99.5%</td></tr>
+            <tr><td>Particle Size</td><td>Nano to micro range</td></tr>
+            <tr><td>Form</td><td>Powder / Slurry</td></tr>
+          </table>
+          <div class="product-industries">
+            <div class="label">Target Industries</div>
+            <div class="industry-tags">
+              <span class="industry-tag">Wafer Fabs</span>
+              <span class="industry-tag">Optical Components</span>
+              <span class="industry-tag">Material Processing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-card-top">
+          <div class="product-emoji">🔮</div>
+          <h3>
+            <a style="text-decoration: none;color:#fff" href="colloidal-silica.html">Colloidal Silica</a>
+            </h3>
+          <span class="product-grade">High-Purity Grade</span>
+          <span class="product-future-tag">Planned</span>
+        </div>
+        <div class="product-card-body">
+          <p class="product-tagline">Sub-Nanometer Finish, Every Time.</p>
+          <p class="product-desc">Planned as a key component for CMP slurries in semiconductor wafer fabrication — targeting exceptional surface finish, minimal contamination, and stable particle distribution.</p>
+          <table class="spec-table">
+            <tr><td>Target Particle Size</td><td>5 nm – 100 nm</td></tr>
+            <tr><td>pH Range</td><td>Customizable</td></tr>
+            <tr><td>Form</td><td>Stable aqueous dispersion</td></tr>
+          </table>
+          <div class="product-industries">
+            <div class="label">Target Industries</div>
+            <div class="industry-tags">
+              <span class="industry-tag">Semiconductor Mfg</span>
+              <span class="industry-tag">Display Panels</span>
+              <span class="industry-tag">Precision Optics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="products-cta reveal">
+      <h3>Interested in Our Products?</h3>
+      <p>Register your interest now. We will contact you as soon as we are production-ready — and your requirements will help us shape our supply capacity.</p>
+      <a href="#contact" class="btn-primary">Register Your Interest →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="reveal">
+      <span class="section-tag">Connect With Us</span>
+      <h2 class="section-title">Let's Start a Conversation.</h2>
+      <p class="section-sub">Even though we're not yet manufacturing, we'd love to understand your requirements, answer questions, and keep you updated on our progress.</p>
+
+      <div class="contact-detail">
+        <div class="contact-icon">📍</div>
+        <div class="contact-detail-text"><h4>Location</h4><p>Mehsana, Gujarat, India - 384002</p></div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">📧</div>
+        <div class="contact-detail-text"><h4>Email</h4><p>info@shraddhachemical.com</p></div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">📞</div>
+        <div class="contact-detail-text"><h4>Phone / WhatsApp</h4><p>+91 9664870193</p></div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">🕐</div>
+        <div class="contact-detail-text"><h4>Business Hours</h4><p>Mon – Sat: 9:00 AM – 6:00 PM IST</p></div>
+      </div>
+
+      <div class="why-contact">
+        <h4>How can we help right now?</h4>
+        <ul>
+          <li>Register interest for when we begin production</li>
+          <li>Share your technical specifications & requirements</li>
+          <li>Get updates on our progress milestones</li>
+          <li>Discuss future supply partnerships early</li>
+          <li>Ask questions about our process or timeline</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contact-form reveal">
+      <h3>Get in Touch</h3>
+      <div class="form-row">
+        <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your name"/></div>
+        <div class="form-group"><label>Company Name</label><input type="text" placeholder="Your company"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@company.com"/></div>
+        <div class="form-group"><label>Phone / WhatsApp</label><input type="tel" placeholder="+91 XXXXXXXXXX"/></div>
+      </div>
+      <div class="form-group">
+        <label>Product of Interest</label>
+        <select>
+          <option value="">Select a product</option>
+          <option>Copper Sulfate (Electronic Grade)</option>
+          <option>Aluminium Oxide (Semiconductor Grade)</option>
+          <option>Colloidal Silica (High-Purity)</option>
+          <option>All Products / Multiple</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Expected Quantity Required</label>
+        <input type="text" placeholder="e.g. 50 kg/month, 200 L per batch, Bulk"/>
+      </div>
+      <div class="form-group">
+        <label>Message / Requirements</label>
+        <textarea placeholder="Tell us about your current supply needs, process requirements, or any questions about our timeline and products..."></textarea>
+      </div>
+      <button class="form-submit">Send Message →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Shraddha <span>Chemical</span></div>
+      <div class="footer-tagline">Semiconductor & Electronic Grade Chemicals — Coming Soon</div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#journey">Our Journey</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-copy">© 2025 Shraddha Chemical. All rights reserved. | Currently in Process Verification Stage — Manufacturing Starting Soon.</div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const siblings = Array.from(entry.target.parentNode.children);
+        const delay = 80 * (siblings.indexOf(entry.target) % 5);
+        setTimeout(() => entry.target.classList.add('visible'), delay);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    let current = '';
+    sections.forEach(sec => { if (window.scrollY >= sec.offsetTop - 100) current = sec.getAttribute('id'); });
+    navLinks.forEach(link => {
+      link.style.color = '';
+      if (link.getAttribute('href') === '#' + current) link.style.color = 'var(--teal)';
+    });
+  });
+</script>
+</body>
+</html>

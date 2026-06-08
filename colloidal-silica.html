@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electronic Grade Colloidal Silica | SilicaTech Advanced Materials</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:        #f0f4f8;
+  --bg2:       #e4eaf2;
+  --bg3:       #d8e2ef;
+  --ink:       #0b1220;
+  --ink2:      #2a3a52;
+  --ink3:      #4a5f7a;
+  --blue:      #1a4fd6;
+  --blue-mid:  #2d6cff;
+  --blue-pale: #c8d9ff;
+  --teal:      #00b4cc;
+  --teal-pale: #bef0f8;
+  --line:      rgba(26,79,214,0.15);
+  --white:     #ffffff;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 56px;
+  background: rgba(240,244,248,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px; font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--blue);
+}
+.nav-logo span { color: var(--ink); }
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--ink3); text-decoration: none; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--blue); }
+.nav-cta {
+  background: var(--blue);
+  color: #fff;
+  padding: 9px 24px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  text-decoration: none; font-weight: 500;
+  border-radius: 2px;
+  transition: background 0.2s, transform 0.2s;
+}
+.nav-cta:hover { background: var(--blue-mid); transform: translateY(-1px); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid; grid-template-columns: 55% 45%;
+  position: relative; overflow: hidden;
+  background: var(--ink);
+}
+.hero-noise {
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.4;
+}
+.hero-glow {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 50% 70% at 75% 40%, rgba(45,108,255,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 30% 50% at 30% 70%, rgba(0,180,204,0.10) 0%, transparent 50%);
+}
+.hero-left {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 140px 64px 80px;
+  position: relative; z-index: 2;
+}
+.hero-eyebrow {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 36px;
+}
+.eyebrow-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 12px rgba(0,180,204,0.7);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+.eyebrow-text {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--teal);
+}
+.hero-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(48px, 5.5vw, 84px);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -1px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.hero-title .accent { color: var(--teal); }
+.hero-formula-inline {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(24px, 2.5vw, 36px);
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 4px;
+  margin-bottom: 32px;
+  display: block;
+}
+.hero-desc {
+  font-size: 15px; line-height: 1.75;
+  color: rgba(255,255,255,0.5);
+  max-width: 440px; font-weight: 300;
+  margin-bottom: 48px;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--blue-mid);
+  color: #fff; padding: 13px 30px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+  text-decoration: none; font-weight: 500; border-radius: 2px;
+  transition: all 0.2s; display: inline-block;
+}
+.btn-primary:hover { background: #3d7aff; transform: translateY(-2px); }
+.btn-ghost {
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.6);
+  padding: 13px 30px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+  text-decoration: none; border-radius: 2px;
+  transition: all 0.2s; display: inline-block;
+}
+.btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
+
+/* ── HERO VISUAL ── */
+.hero-right {
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 2;
+  padding: 120px 40px 80px;
+}
+.colloid-canvas {
+  position: relative; width: 340px; height: 340px;
+}
+.colloid-particle {
+  position: absolute; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.9), rgba(45,108,255,0.4));
+  animation: drift ease-in-out infinite;
+}
+.colloid-particle:nth-child(1)  { width:70px;height:70px; top:30px;  left:60px;  animation-duration:6s;  animation-delay:0s;   box-shadow:0 4px 20px rgba(45,108,255,0.4); }
+.colloid-particle:nth-child(2)  { width:50px;height:50px; top:20px;  left:190px; animation-duration:8s;  animation-delay:1s;   box-shadow:0 4px 16px rgba(45,108,255,0.3); }
+.colloid-particle:nth-child(3)  { width:90px;height:90px; top:120px; left:20px;  animation-duration:7s;  animation-delay:0.5s; box-shadow:0 6px 24px rgba(0,180,204,0.4); }
+.colloid-particle:nth-child(4)  { width:40px;height:40px; top:110px; left:150px; animation-duration:9s;  animation-delay:2s;   box-shadow:0 4px 14px rgba(45,108,255,0.3); }
+.colloid-particle:nth-child(5)  { width:65px;height:65px; top:100px; left:240px; animation-duration:5s;  animation-delay:0.8s; box-shadow:0 4px 18px rgba(0,180,204,0.35); }
+.colloid-particle:nth-child(6)  { width:55px;height:55px; top:220px; left:70px;  animation-duration:7.5s;animation-delay:1.5s; box-shadow:0 4px 16px rgba(45,108,255,0.35); }
+.colloid-particle:nth-child(7)  { width:80px;height:80px; top:220px; left:190px; animation-duration:6.5s;animation-delay:0.3s; box-shadow:0 6px 22px rgba(0,180,204,0.4); }
+.colloid-particle:nth-child(8)  { width:35px;height:35px; top:290px; left:130px; animation-duration:8.5s;animation-delay:1.2s; box-shadow:0 4px 12px rgba(45,108,255,0.3); }
+
+@keyframes drift {
+  0%,100% { transform: translate(0,0) scale(1); }
+  33%      { transform: translate(6px,-8px) scale(1.03); }
+  66%      { transform: translate(-4px,5px) scale(0.97); }
+}
+
+.colloid-label {
+  position: absolute;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--teal);
+  animation: fadeFloat 3s ease-in-out infinite;
+}
+.colloid-label:nth-of-type(1) { top: 0; right: 0; }
+.colloid-label:nth-of-type(2) { bottom: 20px; left: 0; animation-delay: 1s; }
+.colloid-label:nth-of-type(3) { top: 155px; right: -10px; animation-delay: 2s; }
+@keyframes fadeFloat {
+  0%,100% { opacity: 0.4; transform: translateY(0); }
+  50%      { opacity: 1; transform: translateY(-5px); }
+}
+
+/* ── STATS ── */
+.stats-strip {
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+.stat-item {
+  padding: 28px 24px;
+  border-right: 1px solid var(--line);
+  text-align: center;
+}
+.stat-item:last-child { border-right: none; }
+.stat-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 36px; font-weight: 800;
+  color: var(--blue); letter-spacing: -1px;
+  display: block;
+}
+.stat-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--ink3); margin-top: 4px; display: block;
+}
+
+/* ── SECTION BASE ── */
+section { padding: 96px 80px; }
+.section-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 10px;
+}
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(32px, 3.5vw, 52px);
+  font-weight: 800; letter-spacing: -0.5px;
+  margin-bottom: 14px; line-height: 1.05;
+  color: var(--ink);
+}
+.section-sub {
+  font-size: 15px; color: var(--ink3); line-height: 1.7;
+  max-width: 580px; font-weight: 300; margin-bottom: 52px;
+}
+
+/* ── OVERVIEW ── */
+.overview { background: var(--bg); }
+.overview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+.formula-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 36px;
+  border-radius: 4px;
+  margin-bottom: 28px;
+}
+.formula-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--ink3); margin-bottom: 12px;
+}
+.formula {
+  font-family: 'Syne', sans-serif;
+  font-size: 56px; font-weight: 800;
+  color: var(--blue); letter-spacing: -2px;
+}
+.formula sub { font-size: 34px; vertical-align: sub; }
+.formula-name {
+  font-size: 13px; color: var(--ink3);
+  font-family: 'IBM Plex Mono', monospace; margin-top: 8px;
+}
+.formula-props { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+.prop-chip {
+  background: var(--bg2);
+  padding: 10px 14px; border-radius: 2px;
+}
+.prop-chip .pv { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; color: var(--blue); }
+.prop-chip .pk { font-size: 10px; color: var(--ink3); font-family: 'IBM Plex Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+.alt-names { display: flex; gap: 8px; flex-wrap: wrap; }
+.alt-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; letter-spacing: 1px;
+  border: 1px solid var(--line);
+  color: var(--blue); background: var(--blue-pale);
+  padding: 4px 10px; border-radius: 2px;
+}
+.overview-text p {
+  font-size: 15px; line-height: 1.8; color: var(--ink2);
+  font-weight: 300; margin-bottom: 18px;
+}
+.overview-text p strong { color: var(--ink); font-weight: 600; }
+.highlight-box {
+  background: linear-gradient(135deg, var(--blue) 0%, #0e3ab0 100%);
+  color: #fff;
+  padding: 24px 28px; border-radius: 4px;
+  margin-top: 24px;
+}
+.highlight-box h4 { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+.highlight-box p { font-size: 13px; line-height: 1.6; opacity: 0.85; font-weight: 300; }
+
+/* ── SPECS ── */
+.specs { background: var(--ink); }
+.specs .section-title { color: #fff; }
+.specs .section-sub { color: rgba(255,255,255,0.45); }
+.specs .section-tag { color: var(--teal); }
+.spec-table { width: 100%; border-collapse: collapse; }
+.spec-table thead tr { background: var(--blue-mid); }
+.spec-table th {
+  padding: 13px 18px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+  text-align: left; font-weight: 500; color: #fff;
+}
+.spec-table tbody tr { border-bottom: 1px solid rgba(255,255,255,0.06); transition: background 0.15s; }
+.spec-table tbody tr:hover { background: rgba(45,108,255,0.08); }
+.spec-table td {
+  padding: 13px 18px;
+  font-size: 13px;
+  font-family: 'IBM Plex Mono', monospace;
+  color: rgba(255,255,255,0.45);
+}
+.spec-table td:first-child { color: rgba(255,255,255,0.9); font-weight: 500; }
+.spec-table td.hi { color: var(--teal); }
+
+/* ── TYPES ── */
+.types { background: var(--bg); }
+.types-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.type-card {
+  background: var(--white);
+  padding: 36px 28px;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  position: relative; overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.type-card::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--blue), var(--teal));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.3s;
+}
+.type-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(26,79,214,0.12); }
+.type-card:hover::after { transform: scaleX(1); }
+.type-index {
+  font-family: 'Syne', sans-serif; font-size: 64px; font-weight: 800;
+  color: var(--bg2); position: absolute; top: 12px; right: 16px;
+  line-height: 1;
+}
+.type-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--blue); background: var(--blue-pale);
+  padding: 4px 10px; border-radius: 2px;
+  display: inline-block; margin-bottom: 14px;
+}
+.type-title {
+  font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700;
+  color: var(--ink); margin-bottom: 12px; letter-spacing: -0.3px;
+}
+.type-desc {
+  font-size: 13px; color: var(--ink3); line-height: 1.7; font-weight: 300;
+  margin-bottom: 20px;
+}
+.type-spec {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px; color: var(--blue);
+  border: 1px solid var(--line);
+  padding: 5px 12px; border-radius: 2px;
+}
+
+/* ── APPLICATIONS ── */
+.applications { background: var(--bg2); }
+.apps-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+.app-card {
+  background: var(--white);
+  padding: 32px 28px;
+  display: flex; gap: 20px; align-items: flex-start;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.app-card:hover { border-bottom-color: var(--blue); }
+.app-icon-wrap {
+  width: 44px; height: 44px; flex-shrink: 0;
+  background: var(--blue-pale);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+}
+.app-content h4 { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 6px; color: var(--ink); }
+.app-content p { font-size: 13px; color: var(--ink3); line-height: 1.6; font-weight: 300; }
+
+/* ── PROPERTIES ── */
+.properties { background: var(--white); }
+.props-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.prop-list { list-style: none; }
+.prop-list li {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+.prop-list li:first-child { border-top: 1px solid var(--line); }
+.prop-bullet {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0; margin-top: 7px;
+}
+.prop-content h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; color: var(--ink); }
+.prop-content p { font-size: 13px; color: var(--ink3); line-height: 1.6; font-weight: 300; }
+.cert-panel {
+  background: var(--ink);
+  border-radius: 4px;
+  padding: 40px;
+  color: #fff;
+}
+.cert-panel h3 {
+  font-family: 'Syne', sans-serif; font-size: 26px; font-weight: 800;
+  letter-spacing: -0.3px; margin-bottom: 8px; color: var(--teal);
+}
+.cert-panel .cert-sub { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 28px; font-family: 'IBM Plex Mono', monospace; letter-spacing: 1px; }
+.cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.cert-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 3px;
+  padding: 14px 16px;
+}
+.cert-item .ci-name { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--teal); letter-spacing: 1px; margin-bottom: 4px; }
+.cert-item .ci-desc { font-size: 12px; color: rgba(255,255,255,0.45); }
+
+/* ── GRADES/PACKAGING ── */
+.packaging { background: var(--bg); }
+.pack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.pack-card {
+  border: 1px solid var(--line);
+  padding: 32px 28px;
+  background: var(--white);
+  border-radius: 4px;
+  text-align: center;
+}
+.pack-icon { font-size: 32px; margin-bottom: 16px; }
+.pack-size {
+  font-family: 'Syne', sans-serif;
+  font-size: 44px; font-weight: 800;
+  color: var(--blue); letter-spacing: -2px;
+}
+.pack-unit {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px; color: var(--ink3);
+  letter-spacing: 2px; text-transform: uppercase;
+  display: block; margin-bottom: 14px;
+}
+.pack-name { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+.pack-note { font-size: 12px; color: var(--ink3); line-height: 1.6; }
+
+/* ── STORAGE STRIP ── */
+.storage-strip {
+  background: linear-gradient(135deg, var(--blue) 0%, #0e3ab0 100%);
+  padding: 48px 80px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+}
+.storage-item h4 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(255,255,255,0.55); margin-bottom: 8px;
+}
+.storage-item p {
+  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; color: #fff;
+}
+
+/* ── CONTACT ── */
+.contact { background: var(--bg2); }
+.contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink3);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--white);
+  border: 1px solid rgba(26,79,214,0.2);
+  color: var(--ink); padding: 12px 16px;
+  font-family: 'IBM Plex Sans', sans-serif; font-size: 14px;
+  outline: none; border-radius: 2px;
+  transition: border-color 0.2s; width: 100%;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--blue); }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.contact-info h3 {
+  font-family: 'Syne', sans-serif; font-size: 30px; font-weight: 800;
+  letter-spacing: -0.3px; margin-bottom: 28px; color: var(--ink);
+}
+.info-card {
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: 4px; padding: 20px 24px;
+  display: flex; gap: 16px; align-items: flex-start;
+  margin-bottom: 14px;
+}
+.info-icon { font-size: 20px; flex-shrink: 0; }
+.info-text h4 { font-size: 13px; font-weight: 600; margin-bottom: 3px; color: var(--ink); }
+.info-text p { font-size: 13px; color: var(--ink3); line-height: 1.5; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink);
+  padding: 32px 80px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.footer-logo {
+  font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800;
+  color: var(--teal);
+}
+.footer-note {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 1px;
+}
+.footer-links { display: flex; gap: 24px; }
+.footer-links a {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; color: rgba(255,255,255,0.35); text-decoration: none; letter-spacing: 1px;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--teal); }
+
+/* ── REVEAL ── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 900px) {
+  nav { padding: 14px 20px; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .hero-left { padding: 120px 24px 60px; }
+  section { padding: 60px 24px; }
+  .storage-strip { padding: 40px 24px; grid-template-columns: 1fr 1fr; }
+  .stats-strip { grid-template-columns: 1fr 1fr; }
+  .overview-grid, .props-grid, .contact-inner { grid-template-columns: 1fr; }
+  .types-grid, .pack-grid { grid-template-columns: 1fr 1fr; }
+  .apps-2col { grid-template-columns: 1fr; }
+  .cert-grid { grid-template-columns: 1fr; }
+  footer { flex-direction: column; gap: 16px; padding: 24px; text-align: center; }
+  .form-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">SilicaTech <span>Advanced Materials</span></div>
+  <ul class="nav-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#specs">Specifications</a></li>
+    <li><a href="#types">Types</a></li>
+    <li><a href="#applications">Applications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Request Quote</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+  <div class="hero-noise"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-dot"></div>
+      <span class="eyebrow-text">Manufacturer &amp; Supplier — Global Supply</span>
+    </div>
+    <h1 class="hero-title">Electronic<br>Grade<br><span class="accent">Colloidal</span><br>Silica</h1>
+    <span class="hero-formula-inline">SiO₂ · nH₂O</span>
+    <p class="hero-desc">
+      Ultra-pure, nanoscale silicon dioxide dispersions engineered for 
+      chemical mechanical planarization (CMP), semiconductor substrate 
+      polishing, precision coatings, and advanced electronic materials.
+    </p>
+    <div class="hero-actions">
+      <a href="#specs" class="btn-primary">View Specifications</a>
+      <a href="#contact" class="btn-ghost">Request Sample</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="colloid-canvas">
+      <div class="colloid-particle"></div>
+      <div class="colloid-particle"></div>
+      <div class="colloid-particle"></div>
+      <div class="colloid-particle"></div>
+      <div class="colloid-particle"></div>
+      <div class="colloid-particle"></div>
+      <div class="colloid-particle"></div>
+      <div class="colloid-particle"></div>
+      <span class="colloid-label">pH 9.5–10.5</span>
+      <span class="colloid-label">5–150 nm</span>
+      <span class="colloid-label">Stable Sol</span>
+    </div>
+  </div>
+</div>
+
+<!-- STATS STRIP -->
+<div class="stats-strip reveal">
+  <div class="stat-item">
+    <span class="stat-num">99.999%</span>
+    <span class="stat-label">Max SiO₂ Purity</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">5 nm</span>
+    <span class="stat-label">Minimum Particle Size</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">50%</span>
+    <span class="stat-label">Max SiO₂ Concentration</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">&lt;1 ppb</span>
+    <span class="stat-label">Metal Ion Contamination</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">2Y+</span>
+    <span class="stat-label">Shelf Life (Sealed)</span>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section class="overview" id="overview">
+  <div class="reveal">
+    <div class="section-tag">// Product Overview</div>
+    <h2 class="section-title">What Is Electronic Grade Colloidal Silica?</h2>
+    <p class="section-sub">A stable aqueous or non-aqueous dispersion of discrete, amorphous silicon dioxide nanoparticles, manufactured to the highest purity standards for use in semiconductor and precision electronics processes.</p>
+  </div>
+  <div class="overview-grid reveal">
+    <div>
+      <div class="formula-card">
+        <div class="formula-label">Chemical Formula</div>
+        <div class="formula">SiO<sub>2</sub></div>
+        <div class="formula-name">Silicon Dioxide · Silicic Acid Anhydride · Colloidal Silica Sol</div>
+        <div class="formula-props">
+          <div class="prop-chip"><div class="pv">60.08</div><div class="pk">Mol. Weight g/mol</div></div>
+          <div class="prop-chip"><div class="pv">2.20</div><div class="pk">Density g/cm³</div></div>
+          <div class="prop-chip"><div class="pv">1,713°C</div><div class="pk">Melting Point</div></div>
+          <div class="prop-chip"><div class="pv">1.46</div><div class="pk">Refractive Index</div></div>
+        </div>
+      </div>
+      <div class="alt-names">
+        <span class="alt-tag">Colloidal Silica</span>
+        <span class="alt-tag">Silica Sol</span>
+        <span class="alt-tag">Nano-SiO₂</span>
+        <span class="alt-tag">Silicic Acid</span>
+        <span class="alt-tag">CMP Silica</span>
+        <span class="alt-tag">Ludox-Type</span>
+      </div>
+    </div>
+    <div class="overview-text">
+      <p>Electronic grade colloidal silica is a <strong>stable, near-monodisperse suspension of amorphous SiO₂ nanoparticles</strong> in aqueous media (or select organic solvents), produced through controlled hydrolysis and condensation of ultra-high purity silicon precursors.</p>
+      <p>Unlike fumed silica or precipitated silica, colloidal silica particles are <strong>spherical, discrete, and non-aggregated</strong> — characteristics that are critical for reproducible Chemical Mechanical Planarization (CMP) of silicon wafers, sapphire substrates, compound semiconductors, and precision optical surfaces.</p>
+      <p>Electronic grade specifications demand <strong>sub-ppb levels of metallic impurities</strong> (Na⁺, K⁺, Fe³⁺, Al³⁺, Cu²⁺) and tightly controlled particle size distributions to prevent micro-scratching of device-quality surfaces. Our proprietary ion-exchange purification delivers consistent, batch-verified purity.</p>
+      <p>Available in particle sizes from <strong>5 nm to 150 nm</strong>, SiO₂ concentrations of 5% to 50% (w/w), and pH ranges tailored to acidic (CMP oxide), neutral, and alkaline (CMP STI/W) process chemistries.</p>
+      <div class="highlight-box">
+        <h4>CAS Number: 7631-86-9 &nbsp;|&nbsp; EINECS: 231-545-4</h4>
+        <p>Full SDS, TDS, and Certificate of Analysis provided with every shipment. Custom particle size, pH, and concentration profiles available for OEM integration.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section class="specs" id="specs">
+  <div class="reveal">
+    <div class="section-tag">// Technical Data Sheet</div>
+    <h2 class="section-title">Product Specifications</h2>
+    <p class="section-sub">All parameters measured per SEMI, ASTM, and ISO methods. Full CoA issued per lot number.</p>
+  </div>
+  <div class="reveal">
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>Test Method</th>
+          <th>Standard Grade</th>
+          <th>High Purity</th>
+          <th>Ultra Pure (SEMI)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SiO₂ Assay (w/w)</td>
+          <td>Gravimetric / ICP</td>
+          <td>5 – 40%</td>
+          <td>10 – 50%</td>
+          <td class="hi">10 – 50%</td>
+        </tr>
+        <tr>
+          <td>Particle Size (D50, TEM)</td>
+          <td>DLS / TEM</td>
+          <td>20 – 150 nm</td>
+          <td>10 – 100 nm</td>
+          <td class="hi">5 – 80 nm</td>
+        </tr>
+        <tr>
+          <td>Particle Size Distribution</td>
+          <td>DLS (PDI)</td>
+          <td>PDI &lt; 0.15</td>
+          <td>PDI &lt; 0.10</td>
+          <td class="hi">PDI &lt; 0.08</td>
+        </tr>
+        <tr>
+          <td>pH (25°C)</td>
+          <td>ASTM E70</td>
+          <td>3.0 – 11.0</td>
+          <td>3.0 – 11.0</td>
+          <td class="hi">3.0 – 11.0</td>
+        </tr>
+        <tr>
+          <td>Zeta Potential</td>
+          <td>DLS / ELS</td>
+          <td>–20 to –50 mV</td>
+          <td>–25 to –55 mV</td>
+          <td class="hi">–30 to –60 mV</td>
+        </tr>
+        <tr>
+          <td>Viscosity (25°C)</td>
+          <td>ASTM D7042</td>
+          <td>1 – 20 cP</td>
+          <td>1 – 15 cP</td>
+          <td class="hi">1 – 10 cP</td>
+        </tr>
+        <tr>
+          <td>Specific Surface Area (BET)</td>
+          <td>BET N₂</td>
+          <td>20 – 500 m²/g</td>
+          <td>30 – 600 m²/g</td>
+          <td class="hi">50 – 800 m²/g</td>
+        </tr>
+        <tr>
+          <td>Sodium (Na⁺)</td>
+          <td>ICP-MS</td>
+          <td>≤ 500 ppb</td>
+          <td>≤ 50 ppb</td>
+          <td class="hi">≤ 1 ppb</td>
+        </tr>
+        <tr>
+          <td>Iron (Fe³⁺)</td>
+          <td>ICP-MS</td>
+          <td>≤ 200 ppb</td>
+          <td>≤ 10 ppb</td>
+          <td class="hi">≤ 0.5 ppb</td>
+        </tr>
+        <tr>
+          <td>Aluminium (Al³⁺)</td>
+          <td>ICP-MS</td>
+          <td>≤ 200 ppb</td>
+          <td>≤ 10 ppb</td>
+          <td class="hi">≤ 0.5 ppb</td>
+        </tr>
+        <tr>
+          <td>Copper (Cu²⁺)</td>
+          <td>ICP-MS</td>
+          <td>≤ 100 ppb</td>
+          <td>≤ 5 ppb</td>
+          <td class="hi">≤ 0.1 ppb</td>
+        </tr>
+        <tr>
+          <td>Potassium (K⁺)</td>
+          <td>ICP-MS</td>
+          <td>≤ 200 ppb</td>
+          <td>≤ 10 ppb</td>
+          <td class="hi">≤ 0.5 ppb</td>
+        </tr>
+        <tr>
+          <td>Chloride (Cl⁻)</td>
+          <td>Ion Chromatography</td>
+          <td>≤ 5 ppm</td>
+          <td>≤ 1 ppm</td>
+          <td class="hi">≤ 0.1 ppm</td>
+        </tr>
+        <tr>
+          <td>Oversize Particles (&gt; 0.5 μm)</td>
+          <td>LPC / LO</td>
+          <td>≤ 5,000/mL</td>
+          <td>≤ 500/mL</td>
+          <td class="hi">≤ 50/mL</td>
+        </tr>
+        <tr>
+          <td>Appearance</td>
+          <td>Visual</td>
+          <td colspan="3" style="text-align:center;color:rgba(255,255,255,0.6)">Clear to opalescent, colourless aqueous dispersion</td>
+        </tr>
+        <tr>
+          <td>Density (25°C, 30% SiO₂)</td>
+          <td>ASTM D4052</td>
+          <td colspan="3" style="text-align:center;color:rgba(255,255,255,0.6)">~1.19 g/mL</td>
+        </tr>
+        <tr>
+          <td>CAS Number</td>
+          <td>—</td>
+          <td colspan="3" style="text-align:center;color:rgba(255,255,255,0.6)">7631-86-9</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- TYPES -->
+<section class="types" id="types">
+  <div class="reveal">
+    <div class="section-tag">// Product Range</div>
+    <h2 class="section-title">Available Types & Grades</h2>
+    <p class="section-sub">Engineered for specific process chemistries and substrate materials. Custom formulations available.</p>
+  </div>
+  <div class="types-grid reveal">
+    <div class="type-card">
+      <div class="type-index">01</div>
+      <div class="type-badge">Alkaline Sol</div>
+      <h3 class="type-title">Alkaline Colloidal Silica</h3>
+      <p class="type-desc">Ammonium- or amine-stabilised dispersion for STI CMP, tungsten CMP, and silicon oxide polishing. High selectivity over silicon nitride.</p>
+      <span class="type-spec">pH 9.5 – 11.0</span>
+    </div>
+    <div class="type-card">
+      <div class="type-index">02</div>
+      <div class="type-badge">Acidic Sol</div>
+      <h3 class="type-title">Acidic Colloidal Silica</h3>
+      <p class="type-desc">Nitric acid- or sulfonic acid-stabilised sol for copper CMP, cobalt barrier polishing, and dielectric ILD planarization with low defect density.</p>
+      <span class="type-spec">pH 2.0 – 4.5</span>
+    </div>
+    <div class="type-card">
+      <div class="type-index">03</div>
+      <div class="type-badge">Neutral Sol</div>
+      <h3 class="type-title">Neutral Colloidal Silica</h3>
+      <p class="type-desc">Ion-free, neutral dispersion for sensitive optical substrates, glass polishing, and GaAs / InP compound semiconductor finishing with minimal ionic attack.</p>
+      <span class="type-spec">pH 6.0 – 8.0</span>
+    </div>
+    <div class="type-card">
+      <div class="type-index">04</div>
+      <div class="type-badge">Ultra-Fine</div>
+      <h3 class="type-title">5–20 nm Grade</h3>
+      <p class="type-desc">Sub-20 nm particles for ultra-low scratch CMP finishing, dielectric thin-film polishing, EUV pellicle substrate preparation, and nanoscale surface conditioning.</p>
+      <span class="type-spec">D50: 5 – 20 nm</span>
+    </div>
+    <div class="type-card">
+      <div class="type-index">05</div>
+      <div class="type-badge">Concentrated</div>
+      <h3 class="type-title">High Concentration (40–50%)</h3>
+      <p class="type-desc">High solids content for cost-efficient transportation, on-site dilution, binder systems in ceramic processing, and high-film-build coating applications.</p>
+      <span class="type-spec">SiO₂: 40 – 50%</span>
+    </div>
+    <div class="type-card">
+      <div class="type-index">06</div>
+      <div class="type-badge">Organosilica</div>
+      <h3 class="type-title">Surface-Modified Sol</h3>
+      <p class="type-desc">Silane-functionalized particles (amine, epoxy, methacryl, thiol) for enhanced adhesion promotion, anti-reflection coatings, and polymer nanocomposite integration.</p>
+      <span class="type-spec">Custom Surface Groups</span>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="applications" id="applications">
+  <div class="reveal">
+    <div class="section-tag">// End-Use Markets</div>
+    <h2 class="section-title">Applications</h2>
+    <p class="section-sub">From front-end semiconductor fabrication to precision optics and advanced coatings, colloidal silica is a critical process material across industries.</p>
+  </div>
+  <div class="apps-2col reveal">
+    <div class="app-card">
+      <div class="app-icon-wrap">🔬</div>
+      <div class="app-content">
+        <h4>CMP — Semiconductor Wafer Polishing</h4>
+        <p>Primary abrasive in CMP slurries for silicon wafers, STI, ILD, W-plug, Cu interconnect, and barrier layer planarization. Controls removal rate and achieves sub-Angstrom surface roughness (Ra &lt; 0.1 nm).</p>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-icon-wrap">💡</div>
+      <div class="app-content">
+        <h4>Sapphire & LED Substrate Finishing</h4>
+        <p>Final polishing of sapphire wafers for LED epitaxy and SiC substrates for power electronics, delivering epi-ready surface quality required for defect-free device growth.</p>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-icon-wrap">🔭</div>
+      <div class="app-content">
+        <h4>Optical & Photonic Substrates</h4>
+        <p>Scratch-free finishing of fused silica, BK7 glass, UV optics, laser mirrors, and precision lenses. Achieves surface roughness compatible with DUV and EUV lithography.</p>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-icon-wrap">🧪</div>
+      <div class="app-content">
+        <h4>Anti-Reflection Coatings (ARC)</h4>
+        <p>Porous silica ARC films formed from colloidal silica for solar panels, display cover glass, camera lenses, and optical filters — achieving reflectance &lt; 0.5%.</p>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-icon-wrap">📐</div>
+      <div class="app-content">
+        <h4>Hard Coatings & Scratch Resistance</h4>
+        <p>Nano-silica filled UV-curable topcoats for plastic optics, automotive HMI displays, smartphone cover glass, and polycarbonate glazing offering pencil hardness &gt; 6H.</p>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-icon-wrap">⚡</div>
+      <div class="app-content">
+        <h4>Dielectric & Insulation Films</h4>
+        <p>Spin-on silica precursor for interlayer dielectric (ILD) gap-fill, STI fill, and passivation layers in CMOS logic and memory device manufacturing.</p>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-icon-wrap">🔋</div>
+      <div class="app-content">
+        <h4>Battery & Energy Materials</h4>
+        <p>Silica-coated battery separators, SiO₂ additive for silicon-carbon anode composites, and binder in solid electrolyte ceramic processing for next-generation energy storage.</p>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-icon-wrap">🏗️</div>
+      <div class="app-content">
+        <h4>Ceramic Binder & Precision Casting</h4>
+        <p>Colloidal silica binder for investment casting shells, refractory coatings, and advanced technical ceramics — providing green-body strength and controlled sintering.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROPERTIES -->
+<section class="properties" id="properties">
+  <div class="reveal">
+    <div class="section-tag">// Key Differentiators</div>
+    <h2 class="section-title">Technical Advantages</h2>
+    <p class="section-sub">Why manufacturers specify electronic grade colloidal silica over alternatives.</p>
+  </div>
+  <div class="props-grid reveal">
+    <ul class="prop-list">
+      <li>
+        <div class="prop-bullet"></div>
+        <div class="prop-content">
+          <h4>Discrete Spherical Morphology</h4>
+          <p>Non-aggregated, near-spherical particles provide isotropic polishing contact, minimising micro-scratching and achieving superior surface finish compared to fumed or precipitated silica.</p>
+        </div>
+      </li>
+      <li>
+        <div class="prop-bullet"></div>
+        <div class="prop-content">
+          <h4>Narrow Particle Size Distribution</h4>
+          <p>Coefficient of variation (CV) &lt; 15% for most grades; critical for controlling removal rate uniformity and within-wafer non-uniformity (WIWNU) in CMP applications.</p>
+        </div>
+      </li>
+      <li>
+        <div class="prop-bullet"></div>
+        <div class="prop-content">
+          <h4>Long-Term Colloidal Stability</h4>
+          <p>High negative zeta potential (–30 to –60 mV) provides electrostatic repulsion preventing particle agglomeration, ensuring 24+ months shelf life when stored properly.</p>
+        </div>
+      </li>
+      <li>
+        <div class="prop-bullet"></div>
+        <div class="prop-content">
+          <h4>Ultra-Low Metallic Ion Content</h4>
+          <p>Sub-ppb Na⁺, Fe³⁺, Al³⁺, Cu²⁺ levels achieved through multi-stage ion exchange, preventing device contamination in FEOL semiconductor processes.</p>
+        </div>
+      </li>
+      <li>
+        <div class="prop-bullet"></div>
+        <div class="prop-content">
+          <h4>Tunable pH & Surface Chemistry</h4>
+          <p>Available across acidic to alkaline pH ranges; surface hydroxyl density adjusted for specific substrate selectivity ratios and integration with oxidants, inhibitors, and surfactants.</p>
+        </div>
+      </li>
+      <li>
+        <div class="prop-bullet"></div>
+        <div class="prop-content">
+          <h4>Oversize Particle Control</h4>
+          <p>Liquid particle counting (LPC) certification ensures &lt; 50 particles/mL &gt; 0.5 μm in ultra-pure grades, preventing killer defects in advanced node device fabrication.</p>
+        </div>
+      </li>
+    </ul>
+    <div class="cert-panel">
+      <h3>Certifications</h3>
+      <div class="cert-sub">Quality & Compliance Framework</div>
+      <div class="cert-grid">
+        <div class="cert-item">
+          <div class="ci-name">ISO 9001:2015</div>
+          <div class="ci-desc">Quality Management System</div>
+        </div>
+        <div class="cert-item">
+          <div class="ci-name">SEMI F57</div>
+          <div class="ci-desc">Ultrapure Materials Specification</div>
+        </div>
+        <div class="cert-item">
+          <div class="ci-name">ISO 14001:2015</div>
+          <div class="ci-desc">Environmental Management</div>
+        </div>
+        <div class="cert-item">
+          <div class="ci-name">REACH Compliant</div>
+          <div class="ci-desc">EC No 1907/2006</div>
+        </div>
+        <div class="cert-item">
+          <div class="ci-name">RoHS Compliant</div>
+          <div class="ci-desc">Directive 2011/65/EU</div>
+        </div>
+        <div class="cert-item">
+          <div class="ci-name">TSCA Listed</div>
+          <div class="ci-desc">EPA — US Import Ready</div>
+        </div>
+        <div class="cert-item">
+          <div class="ci-name">UN GHS / SDS</div>
+          <div class="ci-desc">Full safety documentation</div>
+        </div>
+        <div class="cert-item">
+          <div class="ci-name">ICP-MS CoA</div>
+          <div class="ci-desc">Per lot lot traceability</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGING -->
+<section class="packaging" id="packaging">
+  <div class="reveal">
+    <div class="section-tag">// Packaging & Storage</div>
+    <h2 class="section-title">Packaging Options</h2>
+    <p class="section-sub">All colloidal silica is packed in high-density polyethylene (HDPE) or fluoropolymer containers to prevent ionic leaching and contamination.</p>
+  </div>
+  <div class="pack-grid reveal">
+    <div class="pack-card">
+      <div class="pack-icon">🧪</div>
+      <div class="pack-size">1</div>
+      <span class="pack-unit">Litre — Sample/Lab</span>
+      <div class="pack-name">HDPE Bottle · Clean-Room Filled</div>
+      <p class="pack-note">For process development, qualification, and analytical testing. Sealed with induction liner.</p>
+    </div>
+    <div class="pack-card">
+      <div class="pack-icon">🪣</div>
+      <div class="pack-size">20</div>
+      <span class="pack-unit">Litre — Pilot Scale</span>
+      <div class="pack-name">HDPE Jerry Can / Cubitainer</div>
+      <p class="pack-note">Pilot production trials and tool qualification. UN-approved container, nitrogen-blanketed.</p>
+    </div>
+    <div class="pack-card">
+      <div class="pack-icon">🛢️</div>
+      <div class="pack-size">1000</div>
+      <span class="pack-unit">Litre — IBC Tote</span>
+      <div class="pack-name">HDPE IBC / Fluoropolymer Drum</div>
+      <p class="pack-note">High-volume production supply. Bulk IBC totes available with pump-out fittings for direct tool integration.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STORAGE STRIP -->
+<div class="storage-strip reveal">
+  <div class="storage-item">
+    <h4>Storage Temperature</h4>
+    <p>5°C – 35°C (Do not freeze)</p>
+  </div>
+  <div class="storage-item">
+    <h4>Shelf Life (Sealed)</h4>
+    <p>24 months from manufacture date</p>
+  </div>
+  <div class="storage-item">
+    <h4>Container Material</h4>
+    <p>HDPE or PFA/PTFE lined</p>
+  </div>
+  <div class="storage-item">
+    <h4>Handling</h4>
+    <p>Avoid freezing, direct sunlight, and strong acid/base mixing</p>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="reveal">
+    <div class="section-tag">// Get In Touch</div>
+    <h2 class="section-title">Request a Quote or Sample</h2>
+    <p class="section-sub">Our semiconductor materials specialists will respond within 24 business hours with technical support and pricing.</p>
+  </div>
+  <div class="contact-inner reveal">
+    <div class="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="Jane">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Doe">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Company / Organization</label>
+        <input type="text" placeholder="Semiconductor Corp Ltd.">
+      </div>
+      <div class="form-group">
+        <label>Business Email</label>
+        <input type="email" placeholder="jane@company.com">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Grade Required</label>
+          <select>
+            <option value="">Select Grade</option>
+            <option>Standard Grade</option>
+            <option>High Purity Grade</option>
+            <option>Ultra Pure (SEMI F57)</option>
+            <option>Alkaline Sol (pH 9.5–11)</option>
+            <option>Acidic Sol (pH 2–4.5)</option>
+            <option>Neutral Sol (pH 6–8)</option>
+            <option>5–20 nm Ultra-Fine</option>
+            <option>High Concentration (40–50%)</option>
+            <option>Surface-Modified / Functionalized</option>
+            <option>Custom Specification</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Volume Required</label>
+          <select>
+            <option value="">Select Volume</option>
+            <option>Sample (1–5 L)</option>
+            <option>Pilot (5–50 L)</option>
+            <option>50 – 500 L</option>
+            <option>500 L – 5,000 L</option>
+            <option>&gt; 5,000 L (Bulk)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Target Particle Size</label>
+          <input type="text" placeholder="e.g. 30 nm D50">
+        </div>
+        <div class="form-group">
+          <label>Target pH</label>
+          <input type="text" placeholder="e.g. pH 10.0">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Application / Process Details</label>
+        <textarea placeholder="Describe your application (e.g. STI CMP, optical polishing, coating), substrate material, removal rate targets, or any special purity requirements..."></textarea>
+      </div>
+      <button class="btn-primary" style="border:none;cursor:pointer;padding:16px;width:100%;font-size:13px;" onclick="alert('Thank you! Our technical team will contact you within 24 business hours.')">Submit Technical Enquiry →</button>
+    </div>
+    <div class="contact-info">
+      <h3>Get In Touch Directly</h3>
+      <div class="info-card">
+        <span class="info-icon">📧</span>
+        <div class="info-text">
+          <h4>Technical & Sales</h4>
+          <p>sales@silicatech-materials.com<br>technical@silicatech-materials.com</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <span class="info-icon">📞</span>
+        <div class="info-text">
+          <h4>Phone</h4>
+          <p>+1 (800) 555-CSIO2<br>Mon – Fri, 8AM – 6PM EST</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <span class="info-icon">🏭</span>
+        <div class="info-text">
+          <h4>Manufacturing Plant</h4>
+          <p>Industrial Zone, Sector 7<br>Your City, State 000000</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <span class="info-icon">🚢</span>
+        <div class="info-text">
+          <h4>Global Export</h4>
+          <p>Shipping to 70+ countries<br>ADR / IMDG compliant packaging</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <span class="info-icon">⏱️</span>
+        <div class="info-text">
+          <h4>Lead Time</h4>
+          <p>Stock grades: 3–7 business days<br>Custom specs: 3–6 weeks</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">SilicaTech Advanced Materials</div>
+  <div class="footer-note">© 2026 SilicaTech. Electronic Grade Colloidal Silica Manufacturer & Supplier.</div>
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Quality Policy</a>
+    <a href="#">SDS Downloads</a>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
+  reveals.forEach(r => io.observe(r));
+
+  // stagger cards
+  document.querySelectorAll('.types-grid, .apps-2col, .pack-grid, .stats-strip, .cert-grid').forEach(g => {
+    g.querySelectorAll(':scope > *').forEach((c, i) => { c.style.transitionDelay = `${i * 70}ms`; });
+  });
+</script>
+</body>
+</html>

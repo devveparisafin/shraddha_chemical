@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electronic Grade Aluminium Oxide | PureOx Materials</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #f5f3ee;
+    --off-white: #ece9e1;
+    --black: #0d0d0d;
+    --charcoal: #1a1a1a;
+    --mid: #3a3a3a;
+    --accent: #c8860a;
+    --accent-light: #e8a020;
+    --accent-pale: #f5e6c8;
+    --steel: #8a9ba8;
+    --line: rgba(200,134,10,0.25);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--charcoal);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 48px;
+    background: rgba(13,13,13,0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: var(--accent);
+  }
+  .nav-logo span { color: var(--white); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--steel);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-cta {
+    background: var(--accent);
+    color: var(--black);
+    padding: 8px 22px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--accent-light); }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 70% 40%, rgba(200,134,10,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 60% at 20% 80%, rgba(138,155,168,0.05) 0%, transparent 50%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(200,134,10,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200,134,10,0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-left {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 140px 64px 80px;
+    position: relative; z-index: 2;
+  }
+  .hero-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    display: inline-block;
+    padding: 5px 14px;
+    margin-bottom: 32px;
+    width: fit-content;
+  }
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(52px, 6vw, 88px);
+    line-height: 0.95;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+  }
+  .hero-title .accent { color: var(--accent); }
+  .hero-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--steel);
+    max-width: 420px;
+    margin-bottom: 44px;
+    font-weight: 300;
+  }
+  .hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--black);
+    padding: 14px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); }
+  .btn-outline {
+    border: 1px solid var(--steel);
+    color: var(--steel);
+    padding: 14px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ─── HERO VISUAL ─── */
+  .hero-right {
+    display: flex; align-items: center; justify-content: center;
+    position: relative; z-index: 2;
+    padding: 120px 40px 80px;
+  }
+  .molecule-wrap {
+    position: relative;
+    width: 380px; height: 380px;
+  }
+  .mol-ring {
+    position: absolute; border-radius: 50%;
+    border: 1px solid;
+    animation: spin linear infinite;
+  }
+  .mol-ring-1 {
+    width: 380px; height: 380px; top: 0; left: 0;
+    border-color: rgba(200,134,10,0.2);
+    animation-duration: 24s;
+  }
+  .mol-ring-2 {
+    width: 280px; height: 280px; top: 50px; left: 50px;
+    border-color: rgba(200,134,10,0.35);
+    animation-duration: 18s; animation-direction: reverse;
+  }
+  .mol-ring-3 {
+    width: 160px; height: 160px; top: 110px; left: 110px;
+    border-color: rgba(200,134,10,0.5);
+    animation-duration: 12s;
+  }
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+  .mol-center {
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%,-50%);
+    width: 80px; height: 80px;
+    background: radial-gradient(circle, var(--accent) 0%, rgba(200,134,10,0.4) 60%, transparent 100%);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: var(--black);
+    box-shadow: 0 0 40px rgba(200,134,10,0.4);
+  }
+
+  .mol-node {
+    position: absolute;
+    width: 12px; height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(200,134,10,0.6);
+  }
+  .mol-node:nth-child(4) { top: -6px; left: 50%; transform: translateX(-50%); }
+  .mol-node:nth-child(5) { bottom: -6px; left: 50%; transform: translateX(-50%); }
+  .mol-node:nth-child(6) { left: -6px; top: 50%; transform: translateY(-50%); }
+  .mol-node:nth-child(7) { right: -6px; top: 50%; transform: translateY(-50%); }
+
+  .spec-float {
+    position: absolute;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 1px;
+    animation: floatPulse 3s ease-in-out infinite;
+  }
+  .spec-float:nth-of-type(1) { top: 40px; right: 0; }
+  .spec-float:nth-of-type(2) { bottom: 60px; left: 0; animation-delay: 1.5s; }
+  .spec-float:nth-of-type(3) { top: 180px; right: -20px; animation-delay: 0.8s; }
+  @keyframes floatPulse {
+    0%, 100% { opacity: 0.5; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(-6px); }
+  }
+
+  /* ─── STATS STRIP ─── */
+  .stats-strip {
+    background: var(--black);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: repeat(4, 1fr);
+  }
+  .stat-item {
+    padding: 32px 40px;
+    border-right: 1px solid var(--line);
+    text-align: center;
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 44px;
+    color: var(--accent);
+    letter-spacing: 2px;
+    display: block;
+  }
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* ─── SECTION BASE ─── */
+  section { padding: 96px 80px; }
+  .section-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 4vw, 56px);
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    line-height: 1;
+  }
+  .section-sub {
+    font-size: 15px;
+    color: var(--steel);
+    line-height: 1.7;
+    max-width: 560px;
+    font-weight: 300;
+    margin-bottom: 56px;
+  }
+
+  /* ─── PRODUCT OVERVIEW ─── */
+  .overview { background: var(--charcoal); }
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .overview-text p {
+    font-size: 15px; line-height: 1.8; color: var(--steel); font-weight: 300;
+    margin-bottom: 20px;
+  }
+  .overview-text p strong { color: var(--white); font-weight: 500; }
+  .formula-box {
+    background: var(--black);
+    border: 1px solid var(--line);
+    padding: 36px;
+    margin-bottom: 32px;
+  }
+  .formula-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--steel); margin-bottom: 12px;
+  }
+  .formula {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    color: var(--accent);
+    letter-spacing: 4px;
+  }
+  .formula sub { font-size: 32px; vertical-align: sub; }
+  .formula-name {
+    font-size: 13px; color: var(--steel);
+    font-family: 'DM Mono', monospace; margin-top: 8px;
+  }
+  .alt-names { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
+  .alt-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; letter-spacing: 1px;
+    border: 1px solid rgba(200,134,10,0.3);
+    color: var(--accent);
+    padding: 4px 10px;
+  }
+
+  /* ─── SPEC TABLE ─── */
+  .specs { background: var(--black); }
+  .spec-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .spec-table thead tr {
+    background: var(--accent);
+    color: var(--black);
+  }
+  .spec-table th {
+    padding: 14px 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    text-align: left; font-weight: 500;
+  }
+  .spec-table tbody tr {
+    border-bottom: 1px solid rgba(200,134,10,0.1);
+    transition: background 0.15s;
+  }
+  .spec-table tbody tr:hover { background: rgba(200,134,10,0.04); }
+  .spec-table td {
+    padding: 14px 20px;
+    font-size: 13px; color: var(--steel);
+    font-family: 'DM Mono', monospace;
+  }
+  .spec-table td:first-child { color: var(--white); font-weight: 500; }
+  .spec-table td:last-child { color: var(--accent); }
+
+  /* ─── GRADES ─── */
+  .grades { background: var(--charcoal); }
+  .grades-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  .grade-card {
+    background: var(--black);
+    padding: 40px 32px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+    cursor: default;
+  }
+  .grade-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .grade-card:hover { transform: translateY(-4px); }
+  .grade-card:hover::before { transform: scaleX(1); }
+  .grade-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 56px; color: rgba(200,134,10,0.15);
+    position: absolute; top: 16px; right: 20px;
+    line-height: 1;
+  }
+  .grade-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 12px;
+  }
+  .grade-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px; letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+  .grade-desc {
+    font-size: 13px; color: var(--steel); line-height: 1.7;
+    font-weight: 300; margin-bottom: 20px;
+  }
+  .grade-purity {
+    display: inline-block;
+    background: rgba(200,134,10,0.1);
+    border: 1px solid var(--line);
+    padding: 6px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px; color: var(--accent);
+    letter-spacing: 1px;
+  }
+
+  /* ─── APPLICATIONS ─── */
+  .applications { background: var(--black); }
+  .apps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+  .app-card {
+    padding: 36px 28px;
+    background: var(--charcoal);
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  .app-card:hover { border-bottom-color: var(--accent); background: var(--black); }
+  .app-icon {
+    font-size: 28px; margin-bottom: 16px;
+    filter: grayscale(0.3);
+  }
+  .app-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px; letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .app-desc { font-size: 13px; color: var(--steel); line-height: 1.6; font-weight: 300; }
+
+  /* ─── FEATURES ─── */
+  .features { background: var(--charcoal); }
+  .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .feature-list { list-style: none; }
+  .feature-list li {
+    display: flex; align-items: flex-start; gap: 16px;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(200,134,10,0.1);
+  }
+  .feature-list li:first-child { border-top: 1px solid rgba(200,134,10,0.1); }
+  .feature-icon {
+    width: 32px; height: 32px; flex-shrink: 0;
+    background: rgba(200,134,10,0.1);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    border: 1px solid var(--line);
+  }
+  .feature-content h4 {
+    font-size: 14px; font-weight: 500; margin-bottom: 4px; color: var(--white);
+  }
+  .feature-content p {
+    font-size: 13px; color: var(--steel); line-height: 1.6; font-weight: 300;
+  }
+  .features-right {
+    background: var(--black);
+    border: 1px solid var(--line);
+    padding: 40px;
+  }
+  .features-right h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px; letter-spacing: 1px;
+    margin-bottom: 20px; color: var(--accent);
+  }
+  .cert-list { list-style: none; }
+  .cert-list li {
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(200,134,10,0.08);
+    font-size: 13px; color: var(--steel);
+    font-family: 'DM Mono', monospace;
+  }
+  .cert-list li::before {
+    content: '✓';
+    color: var(--accent);
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+
+  /* ─── PACKAGING ─── */
+  .packaging { background: var(--black); }
+  .pack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .pack-card {
+    border: 1px solid var(--line);
+    padding: 32px;
+    text-align: center;
+    position: relative;
+  }
+  .pack-size {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px; color: var(--accent); letter-spacing: 2px;
+  }
+  .pack-unit {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px; color: var(--steel);
+    letter-spacing: 2px; text-transform: uppercase;
+    display: block; margin-bottom: 16px;
+  }
+  .pack-name {
+    font-size: 14px; font-weight: 500; color: var(--white); margin-bottom: 8px;
+  }
+  .pack-note { font-size: 12px; color: var(--steel); line-height: 1.5; }
+
+  /* ─── CONTACT ─── */
+  .contact {
+    background: var(--black);
+    border-top: 1px solid var(--line);
+  }
+  .contact-inner {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+    align-items: start;
+  }
+  .contact-form { display: flex; flex-direction: column; gap: 16px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--steel);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: var(--charcoal);
+    border: 1px solid rgba(200,134,10,0.2);
+    color: var(--white);
+    padding: 12px 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--accent); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-group select option { background: var(--charcoal); }
+  .contact-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px; letter-spacing: 2px; margin-bottom: 24px;
+    color: var(--white);
+  }
+  .info-item {
+    display: flex; gap: 16px;
+    margin-bottom: 24px; align-items: flex-start;
+  }
+  .info-icon { font-size: 18px; flex-shrink: 0; padding-top: 2px; }
+  .info-text h4 { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+  .info-text p { font-size: 13px; color: var(--steel); line-height: 1.5; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--black);
+    border-top: 1px solid rgba(200,134,10,0.15);
+    padding: 32px 80px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px; letter-spacing: 3px; color: var(--accent);
+  }
+  .footer-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; color: var(--steel); letter-spacing: 1px;
+  }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; color: var(--steel); text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--accent); }
+
+  /* ─── SCROLL ANIM ─── */
+  .reveal {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 900px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { padding: 120px 24px 60px; }
+    section { padding: 60px 24px; }
+    .stats-strip { grid-template-columns: 1fr 1fr; }
+    .overview-grid, .features-grid, .contact-inner { grid-template-columns: 1fr; }
+    .grades-grid, .apps-grid { grid-template-columns: 1fr 1fr; }
+    .pack-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 16px; padding: 24px; text-align: center; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">PureOx<span> Materials</span></div>
+  <ul class="nav-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#specs">Specifications</a></li>
+    <li><a href="#grades">Grades</a></li>
+    <li><a href="#applications">Applications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Request Quote</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-left">
+    <div class="hero-tag">Manufacturer & Supplier</div>
+    <h1 class="hero-title">
+      Electronic<br>Grade<br><span class="accent">Aluminium</span><br>Oxide
+    </h1>
+    <p class="hero-desc">
+      Ultra-high purity Al₂O₃ engineered for demanding semiconductor, 
+      substrate, and advanced electronics applications. Consistent quality. 
+      Global supply chain. ISO certified.
+    </p>
+    <div class="hero-actions">
+      <a href="#specs" class="btn-primary">View Specifications</a>
+      <a href="#contact" class="btn-outline">Request Sample</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="molecule-wrap">
+      <div class="mol-ring mol-ring-1"></div>
+      <div class="mol-ring mol-ring-2"></div>
+      <div class="mol-ring mol-ring-3">
+        <div class="mol-node"></div>
+        <div class="mol-node"></div>
+        <div class="mol-node"></div>
+        <div class="mol-node"></div>
+      </div>
+      <div class="mol-center">Al₂O₃</div>
+      <span class="spec-float">99.99% Pure</span>
+      <span class="spec-float">Submicron</span>
+      <span class="spec-float">ISO 9001</span>
+    </div>
+  </div>
+</div>
+
+<!-- STATS STRIP -->
+<div class="stats-strip reveal">
+  <div class="stat-item">
+    <span class="stat-num">99.99%</span>
+    <span class="stat-label">Max Purity (4N Grade)</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">0.1μm</span>
+    <span class="stat-label">Min Particle Size</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">2050°C</span>
+    <span class="stat-label">Melting Point</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">500+</span>
+    <span class="stat-label">Clients Worldwide</span>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section class="overview" id="overview">
+  <div class="reveal">
+    <div class="section-tag">// Product Overview</div>
+    <h2 class="section-title">What Is Electronic Grade Al₂O₃?</h2>
+    <p class="section-sub">A precisely manufactured form of aluminium oxide meeting the stringent purity and particle size demands of the electronics and semiconductor industry.</p>
+  </div>
+  <div class="overview-grid reveal">
+    <div>
+      <div class="formula-box">
+        <div class="formula-label">Chemical Formula</div>
+        <div class="formula">Al<sub>2</sub>O<sub>3</sub></div>
+        <div class="formula-name">Dialuminium Trioxide · Corundum · Alumina</div>
+      </div>
+      <div class="alt-names">
+        <span class="alt-tag">Alumina</span>
+        <span class="alt-tag">Corundum</span>
+        <span class="alt-tag">α-Al₂O₃</span>
+        <span class="alt-tag">Aluminum Oxide</span>
+        <span class="alt-tag">Electronic Alumina</span>
+      </div>
+    </div>
+    <div class="overview-text">
+      <p>Electronic grade aluminium oxide is a <strong>high-purity, precisely controlled powder or ceramic material</strong> produced to meet the exacting standards of the semiconductor, LED, power electronics, and advanced substrate industries.</p>
+      <p>Unlike industrial-grade alumina, electronic grade Al₂O₃ undergoes rigorous purification processes to achieve purity levels of <strong>99.9% to 99.999%</strong>, with tightly controlled particle size distributions, minimal ionic contamination, and extremely low levels of trace metals that could compromise electronic device performance.</p>
+      <p>Available in multiple crystallographic phases (α, γ, θ), particle morphologies, and surface area specifications to suit substrate manufacturing, polishing, coating, and dielectric applications.</p>
+      <p>We manufacture and supply electronic grade aluminium oxide in <strong>batch quantities from laboratory scale to multi-tonne industrial volumes</strong>, with full traceability and certificate of analysis (CoA) for every lot.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIFICATIONS -->
+<section class="specs" id="specs">
+  <div class="reveal">
+    <div class="section-tag">// Technical Data</div>
+    <h2 class="section-title">Product Specifications</h2>
+    <p class="section-sub">All data measured per ASTM and ISO standard methods. Custom specifications available upon request.</p>
+  </div>
+  <div class="reveal">
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>Test Method</th>
+          <th>3N Grade</th>
+          <th>4N Grade</th>
+          <th>5N Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Al₂O₃ Purity</td>
+          <td>ICP-OES</td>
+          <td>≥ 99.9%</td>
+          <td>≥ 99.99%</td>
+          <td>≥ 99.999%</td>
+        </tr>
+        <tr>
+          <td>SiO₂ Content</td>
+          <td>ICP-OES</td>
+          <td>≤ 500 ppm</td>
+          <td>≤ 50 ppm</td>
+          <td>≤ 5 ppm</td>
+        </tr>
+        <tr>
+          <td>Fe₂O₃ Content</td>
+          <td>ICP-OES</td>
+          <td>≤ 200 ppm</td>
+          <td>≤ 20 ppm</td>
+          <td>≤ 2 ppm</td>
+        </tr>
+        <tr>
+          <td>Na₂O Content</td>
+          <td>Flame AAS</td>
+          <td>≤ 300 ppm</td>
+          <td>≤ 30 ppm</td>
+          <td>≤ 3 ppm</td>
+        </tr>
+        <tr>
+          <td>Average Particle Size (D50)</td>
+          <td>Laser Diffraction</td>
+          <td>0.5 – 10 μm</td>
+          <td>0.1 – 5 μm</td>
+          <td>0.1 – 1 μm</td>
+        </tr>
+        <tr>
+          <td>Specific Surface Area (BET)</td>
+          <td>BET N₂</td>
+          <td>5 – 50 m²/g</td>
+          <td>10 – 100 m²/g</td>
+          <td>20 – 150 m²/g</td>
+        </tr>
+        <tr>
+          <td>Crystal Phase</td>
+          <td>XRD</td>
+          <td>α / γ</td>
+          <td>α / γ / θ</td>
+          <td>α / γ</td>
+        </tr>
+        <tr>
+          <td>Bulk Density (Loose)</td>
+          <td>ASTM B212</td>
+          <td>0.8 – 1.2 g/cc</td>
+          <td>0.6 – 1.1 g/cc</td>
+          <td>0.4 – 0.9 g/cc</td>
+        </tr>
+        <tr>
+          <td>Moisture Content</td>
+          <td>Karl Fischer</td>
+          <td>≤ 0.5%</td>
+          <td>≤ 0.3%</td>
+          <td>≤ 0.1%</td>
+        </tr>
+        <tr>
+          <td>pH (10% Slurry)</td>
+          <td>ASTM E70</td>
+          <td>6.5 – 8.5</td>
+          <td>6.8 – 8.2</td>
+          <td>7.0 – 8.0</td>
+        </tr>
+        <tr>
+          <td>Dielectric Constant (1 MHz)</td>
+          <td>ASTM D150</td>
+          <td>~9.5</td>
+          <td>~9.8</td>
+          <td>~10.0</td>
+        </tr>
+        <tr>
+          <td>Thermal Conductivity</td>
+          <td>ASTM E1530</td>
+          <td>20 – 30 W/m·K</td>
+          <td>25 – 35 W/m·K</td>
+          <td>30 – 40 W/m·K</td>
+        </tr>
+        <tr>
+          <td>Hardness (Mohs)</td>
+          <td>—</td>
+          <td>9</td>
+          <td>9</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>Melting Point</td>
+          <td>—</td>
+          <td colspan="3" style="text-align:center">2050 °C</td>
+        </tr>
+        <tr>
+          <td>Molecular Weight</td>
+          <td>—</td>
+          <td colspan="3" style="text-align:center">101.96 g/mol</td>
+        </tr>
+        <tr>
+          <td>CAS Number</td>
+          <td>—</td>
+          <td colspan="3" style="text-align:center">1344-28-1</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- GRADES -->
+<section class="grades" id="grades">
+  <div class="reveal">
+    <div class="section-tag">// Product Grades</div>
+    <h2 class="section-title">Available Grades</h2>
+    <p class="section-sub">Each grade is optimised for specific end-use applications with tailored particle morphology and surface chemistry.</p>
+  </div>
+  <div class="grades-grid reveal">
+    <div class="grade-card">
+      <div class="grade-num">01</div>
+      <div class="grade-tag">Standard Electronic</div>
+      <h3 class="grade-title">3N Grade</h3>
+      <p class="grade-desc">General purpose electronic grade alumina for substrate coatings, filler applications in epoxy compounds, and CMP slurries requiring moderate purity.</p>
+      <span class="grade-purity">≥ 99.9% Al₂O₃</span>
+    </div>
+    <div class="grade-card">
+      <div class="grade-num">02</div>
+      <div class="grade-tag">High Purity</div>
+      <h3 class="grade-title">4N Grade</h3>
+      <p class="grade-desc">High-purity alumina for advanced LED substrates, ceramic packages, dielectric layers in MLCC, and thermal interface material applications.</p>
+      <span class="grade-purity">≥ 99.99% Al₂O₃</span>
+    </div>
+    <div class="grade-card">
+      <div class="grade-num">03</div>
+      <div class="grade-tag">Ultra High Purity</div>
+      <h3 class="grade-title">5N Grade</h3>
+      <p class="grade-desc">Ultra high purity for the most demanding semiconductor front-end processes, EUV lithography components, and research-grade oxide film deposition targets.</p>
+      <span class="grade-purity">≥ 99.999% Al₂O₃</span>
+    </div>
+    <div class="grade-card">
+      <div class="grade-num">04</div>
+      <div class="grade-tag">Submicron / Nano</div>
+      <h3 class="grade-title">Nano Grade</h3>
+      <p class="grade-desc">Nanoparticle alumina (20–100 nm) for advanced CMP polishing, nanocomposite dielectrics, high-frequency ceramic resonators, and thin-film processes.</p>
+      <span class="grade-purity">D50: 20–100 nm</span>
+    </div>
+    <div class="grade-card">
+      <div class="grade-num">05</div>
+      <div class="grade-tag">Calcined / α-Phase</div>
+      <h3 class="grade-title">Alpha Grade</h3>
+      <p class="grade-desc">Thermodynamically stable α-Al₂O₃ with superior hardness and wear resistance for polishing substrates, sapphire grinding, and high-temperature ceramic components.</p>
+      <span class="grade-purity">α-Phase &gt; 99%</span>
+    </div>
+    <div class="grade-card">
+      <div class="grade-num">06</div>
+      <div class="grade-tag">Activated / γ-Phase</div>
+      <h3 class="grade-title">Gamma Grade</h3>
+      <p class="grade-desc">High surface area γ-Al₂O₃ for catalyst support layers, gate dielectric precursors, ALD precursor carrier, and advanced moisture-absorbing ceramic filters.</p>
+      <span class="grade-purity">BET &gt; 150 m²/g</span>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="applications" id="applications">
+  <div class="reveal">
+    <div class="section-tag">// End-Use Markets</div>
+    <h2 class="section-title">Applications</h2>
+    <p class="section-sub">Electronic grade Al₂O₃ serves critical functions across the entire electronics value chain.</p>
+  </div>
+  <div class="apps-grid reveal">
+    <div class="app-card">
+      <div class="app-icon">💡</div>
+      <h3 class="app-title">LED & Lighting</h3>
+      <p class="app-desc">Sapphire substrate polishing, LED ceramic packages, phosphor carriers, and white LED diffuser compounds.</p>
+    </div>
+    <div class="app-card">
+      <div class="app-icon">⚡</div>
+      <h3 class="app-title">Power Electronics</h3>
+      <p class="app-desc">DBC substrate material, SiC/GaN device insulators, thermal interface fillers, and high-voltage ceramic packages.</p>
+    </div>
+    <div class="app-card">
+      <div class="app-icon">🔬</div>
+      <h3 class="app-title">Semiconductor</h3>
+      <p class="app-desc">CMP slurries, ALD precursor support, dielectric layer deposition, gate oxide precursor, and wafer carrier coatings.</p>
+    </div>
+    <div class="app-card">
+      <div class="app-icon">📡</div>
+      <h3 class="app-title">RF & Microwave</h3>
+      <p class="app-desc">Ceramic substrates for RF filters, microwave antenna housings, low-loss dielectric resonators, and LTCC tape components.</p>
+    </div>
+    <div class="app-card">
+      <div class="app-icon">🔋</div>
+      <h3 class="app-title">Battery Separators</h3>
+      <p class="app-desc">Alumina ceramic-coated battery separators for lithium-ion and solid-state batteries offering thermal stability and puncture resistance.</p>
+    </div>
+    <div class="app-card">
+      <div class="app-icon">🖥️</div>
+      <h3 class="app-title">Printed Electronics</h3>
+      <p class="app-desc">High-purity alumina ink for thick-film dielectrics, PCB substrate coatings, and inkjet-printed electronic circuits.</p>
+    </div>
+    <div class="app-card">
+      <div class="app-icon">🔭</div>
+      <h3 class="app-title">Optics & Photonics</h3>
+      <p class="app-desc">UV-transparent optical coatings, laser optics, night-vision windows, and refractive index-controlled thin film stacks.</p>
+    </div>
+    <div class="app-card">
+      <div class="app-icon">🛡️</div>
+      <h3 class="app-title">Protective Coatings</h3>
+      <p class="app-desc">Plasma spray coatings for etch-resistant semiconductor chamber components, anti-corrosion liners, and high-wear coatings.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="reveal">
+    <div class="section-tag">// Why Choose Us</div>
+    <h2 class="section-title">Key Properties & Advantages</h2>
+    <p class="section-sub">Our electronic grade aluminium oxide is engineered with precision across every critical parameter.</p>
+  </div>
+  <div class="features-grid reveal">
+    <ul class="feature-list">
+      <li>
+        <div class="feature-icon">🌡️</div>
+        <div class="feature-content">
+          <h4>Exceptional Thermal Stability</h4>
+          <p>Stable up to 2050°C with no phase transformation below 1000°C (α-phase), ideal for high-temperature processing environments.</p>
+        </div>
+      </li>
+      <li>
+        <div class="feature-icon">⚡</div>
+        <div class="feature-content">
+          <h4>Excellent Electrical Insulation</h4>
+          <p>Volume resistivity &gt;10¹⁴ Ω·cm and dielectric strength of 15–35 kV/mm, critical for insulating semiconductor and power device applications.</p>
+        </div>
+      </li>
+      <li>
+        <div class="feature-icon">🔷</div>
+        <div class="feature-content">
+          <h4>Controlled Particle Size Distribution</h4>
+          <p>Narrow PSD with D10/D50/D90 specifications certified per lot, ensuring process repeatability in CMP and tape casting.</p>
+        </div>
+      </li>
+      <li>
+        <div class="feature-icon">🧪</div>
+        <div class="feature-content">
+          <h4>Ultra-Low Metallic Impurities</h4>
+          <p>Trace Na⁺, Fe³⁺, Si⁴⁺ controlled to sub-ppm levels, preventing ionic contamination in device junctions and dielectric layers.</p>
+        </div>
+      </li>
+      <li>
+        <div class="feature-icon">🔬</div>
+        <div class="feature-content">
+          <h4>High Surface Area Options</h4>
+          <p>γ-Al₂O₃ grades with BET surface areas up to 200 m²/g for catalyst support, ALD precursor carrier, and reactive sintering applications.</p>
+        </div>
+      </li>
+      <li>
+        <div class="feature-icon">📦</div>
+        <div class="feature-content">
+          <h4>Consistent Batch-to-Batch Quality</h4>
+          <p>Full lot traceability with Certificate of Analysis (CoA) per shipment. Cpk ≥ 1.33 on all critical parameters.</p>
+        </div>
+      </li>
+    </ul>
+    <div class="features-right">
+      <h3>Certifications & Compliance</h3>
+      <ul class="cert-list">
+        <li>ISO 9001:2015 – Quality Management System</li>
+        <li>ISO 14001:2015 – Environmental Management</li>
+        <li>REACH Regulation (EC) No 1907/2006</li>
+        <li>RoHS Directive 2011/65/EU Compliant</li>
+        <li>IATF 16949 – Automotive Supplier Quality</li>
+        <li>UN GHS / SDS documentation provided</li>
+        <li>TSCA (EPA) compliant – USA import ready</li>
+        <li>Conflict Minerals Free Declaration</li>
+        <li>ICP-OES, XRD, BET, PSD Analysis Reports</li>
+        <li>Full COA with every shipment batch</li>
+        <li>Third-party lab verification available</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGING -->
+<section class="packaging" id="packaging">
+  <div class="reveal">
+    <div class="section-tag">// Packaging & Supply</div>
+    <h2 class="section-title">Packaging Options</h2>
+    <p class="section-sub">Moisture-controlled packaging to preserve purity during transit and storage. Custom pack sizes available.</p>
+  </div>
+  <div class="pack-grid reveal">
+    <div class="pack-card">
+      <div class="pack-size">500</div>
+      <span class="pack-unit">Grams — Lab Pack</span>
+      <div class="pack-name">HDPE Jar · Inert Gas Sealed</div>
+      <p class="pack-note">Ideal for R&D sampling, process development, and analytical verification. Resealable with desiccant insert.</p>
+    </div>
+    <div class="pack-card">
+      <div class="pack-size">5</div>
+      <span class="pack-unit">Kilogram — Pilot Pack</span>
+      <div class="pack-name">Double-Bag HDPE Drum</div>
+      <p class="pack-note">For small-batch production trials. Nitrogen-purged inner bag with moisture indicator card included.</p>
+    </div>
+    <div class="pack-card">
+      <div class="pack-size">25</div>
+      <span class="pack-unit">Kilogram — Production</span>
+      <div class="pack-name">Multi-Wall Paper Bag · PE Liner</div>
+      <p class="pack-note">Standard production supply. Palletised with stretch wrap and moisture-barrier outer. Export-ready.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="reveal">
+    <div class="section-tag">// Get In Touch</div>
+    <h2 class="section-title">Request a Quote or Sample</h2>
+    <p class="section-sub">Our technical team will respond within 24 business hours with a tailored proposal.</p>
+  </div>
+  <div class="contact-inner reveal">
+    <div class="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="John">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Smith">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Company / Organization</label>
+        <input type="text" placeholder="ACME Electronics Ltd.">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="john@company.com">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Grade Required</label>
+          <select>
+            <option value="">Select Grade</option>
+            <option>3N Grade (99.9%)</option>
+            <option>4N Grade (99.99%)</option>
+            <option>5N Grade (99.999%)</option>
+            <option>Nano Grade</option>
+            <option>Alpha (α) Grade</option>
+            <option>Gamma (γ) Grade</option>
+            <option>Custom Specification</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Quantity Required</label>
+          <select>
+            <option value="">Select Quantity</option>
+            <option>Sample (< 1 kg)</option>
+            <option>1 – 25 kg</option>
+            <option>25 – 500 kg</option>
+            <option>500 kg – 5 MT</option>
+            <option>> 5 MT (Bulk)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Application / End Use</label>
+        <textarea placeholder="Describe your application, key property requirements, or any special testing needs..."></textarea>
+      </div>
+      <button class="btn-primary" style="border:none;cursor:pointer;width:100%;padding:16px;" onclick="alert('Thank you! Our team will contact you within 24 hours.')">Submit Enquiry →</button>
+    </div>
+    <div class="contact-info">
+      <h3>Direct Contact</h3>
+      <div class="info-item">
+        <span class="info-icon">📧</span>
+        <div class="info-text">
+          <h4>Sales & Technical Enquiries</h4>
+          <p>sales@pureoxmaterials.com<br>technical@pureoxmaterials.com</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">📞</span>
+        <div class="info-text">
+          <h4>Phone</h4>
+          <p>+1 (800) 555-ALOX<br>Mon–Fri, 8AM – 6PM EST</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">📍</span>
+        <div class="info-text">
+          <h4>Manufacturing Facility</h4>
+          <p>Industrial Zone, Sector 12<br>Your City, State 000000</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">🚢</span>
+        <div class="info-text">
+          <h4>Global Shipping</h4>
+          <p>Export to 60+ countries<br>FCA, CIF, DDP Incoterms available</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">⏱️</span>
+        <div class="info-text">
+          <h4>Lead Time</h4>
+          <p>Stock grades: 3–5 business days<br>Custom specs: 4–8 weeks</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">PureOx Materials</div>
+  <div class="footer-note">© 2026 PureOx Materials. Electronic Grade Al₂O₃ Manufacturer & Supplier.</div>
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Quality Policy</a>
+    <a href="#">SDS Downloads</a>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+  reveals.forEach(r => io.observe(r));
+
+  // Stagger children in grid reveals
+  document.querySelectorAll('.grades-grid, .apps-grid, .pack-grid, .stats-strip').forEach(grid => {
+    grid.querySelectorAll(':scope > *').forEach((child, i) => {
+      child.style.transitionDelay = `${i * 80}ms`;
+    });
+  });
+</script>
+</body>
+</html>
